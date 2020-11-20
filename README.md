@@ -3,8 +3,8 @@
 
 #### Where stuff is:
 - Planning stuff is on docs
-- Images/sounds are in `/assets/`
-- Scripts are in `scripts`
+- Images/sounds are in `assets/`
+- Scripts are in `scripts/`
 
 #### How stuff will be made:
 - Images: GraphicsGale primarily
