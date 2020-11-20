@@ -939,6 +939,8 @@ wrk.GameEngine = class {
 
     static crntScene;
 
+    static deltaTime;
+
     static init(canvasSize, globalScale, backgroundColor=0x000000) {
         wrk.internalWarn('wrk.GameEngine is an undocumented, untested festure. Use with caution');
         
@@ -1017,6 +1019,8 @@ wrk.GameEngine = class {
     // -------------
 
     static update() {
+        this.deltaTime = this.pixiApp.ticker.elapsedMS / 1000;
+
         if (this.crntScene != null) {
             this.crntScene.internalUpdate();
         }
