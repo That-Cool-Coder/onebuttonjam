@@ -6,22 +6,54 @@ class Player extends wrk.GameEngine.DrawableEntity {
     acceleration = 400;
     brakePower = 500;
 
-    size = wrk.v(30, 60);
+    colliderSize = wrk.v(30, 60);
 
-    constructor(name, localPosition, localAngle, texture, controllerDial,
-        obstacles) {
+    worldComponentInteractions = {
+        'wall' : obj => this.interactWithWall(obj),
+        'portal' : obj => this.interactWithPortal(obj),
+        'spike' : obj => this.interactWithSpike(obj),
+    }
 
-        super(name, localPosition, localAngle, texture, wrk.v(1, 1));
+    constructor(name, localPosition, localAngle, texture, textureSize, controllerDial,
+        worldComponents) {
 
-        this.setTextureSize(this.size); // call this after super to allow use of this
-
-        this.obstacles = obstacles;
+        super(name, localPosition, localAngle, texture, textureSize);
+        
+        this.setWorldComponents(worldComponents);
 
         this.spaceDownLastFrame = false;
 
         this.velocity = wrk.v(0, 0);
         this.controllerDial = controllerDial;
         this.direction = 'stopped'; // right left or stopped
+    }
+
+    get topLeftPos() {
+        return wrk.v.copySub(this.globalPosition, wrk.v.copyDiv(this.colliderSize, 2));
+    }
+
+    get bottomRightPos() {
+        return wrk.v.copyAdd(this.globalPosition, wrk.v.copyDiv(this.colliderSize, 2));
+    }
+
+    isTouching(component) {
+        // Put these in in vars as they are recursive getters
+        var selfTopLeft = this.topLeftPos;
+        var selfBottomRight = this.bottomRightPos;
+        var otherTopLeft = component.topLeftPos;
+        var otherBottomRight = component.bottomRightPos;
+        
+        return rectRectCollision(selfTopLeft, selfBottomRight, otherTopLeft, otherBottomRight);
+    }
+
+    collisionSide(component) {
+
+        // Put these in in vars as they are recursive getters
+        var selfTopLeft = this.topLeftPos;
+        var componentTopLeft = component.topLeftPos;
+
+        return rectRectCollisionSide(selfTopLeft, this.colliderSize,
+            componentTopLeft, component.colliderSize);
     }
 
     checkControl() {
@@ -56,16 +88,15 @@ class Player extends wrk.GameEngine.DrawableEntity {
     }
 
     checkGrounded() {
-        // Use a for of loop to allow break
-        var grounded = false;
 
-        for (var obstacle of this.obstacles) {
-            var thisBottomPos = this.localPosition.y + this.size.y / 2
-            var obstacleTopPos = obstacle.localPosition.y - obstacle.textureSize.y / 2;
-            if (thisBottomPos >= obstacleTopPos) {
-                this.localPosition.y = obstacleTopPos - this.size.y / 2;
-                this.velocity.y = 0;
-                grounded = true;
+        // Use a for...of instead of a foreach to allow break
+        var grounded = false;
+        for (var component of this.worldComponents) {
+            if (component.type == 'wall') {
+                if (this.collisionSide(component) == 'bottom') {
+                    grounded = true;
+                    break;
+                }
             }
         }
         this.isGrounded = grounded;
@@ -119,13 +150,33 @@ class Player extends wrk.GameEngine.DrawableEntity {
         else this.velocity.x = 0;
     }
 
+    interactWithWorld() {
+        this.worldComponents.forEach(component => {
+            this.worldComponentInteractions[component.type](component);
+        })
+    }
+
+    setWorldComponents(components) {
+        this.worldComponents = components;
+    }
+
+    debugKeybinds() {
+        var speed = 5;
+        if (wrk.GameEngine.keyboard.keyIsDown('ArrowUp')) this.localPosition.y -= speed;
+        if (wrk.GameEngine.keyboard.keyIsDown('ArrowDown')) this.localPosition.y += speed;
+        if (wrk.GameEngine.keyboard.keyIsDown('ArrowLeft')) this.localPosition.x -= speed;
+        if (wrk.GameEngine.keyboard.keyIsDown('ArrowRight')) this.localPosition.x += speed;
+    }
+
     update() {
         this.checkGrounded();
 
         this.fall();
         this.checkControl();
 
-        this.groundedDebugTint();
+        this.debugKeybinds();
+
+        //this.groundedDebugTint();
 
         switch(this.direction) {
             case 'left':
@@ -141,5 +192,52 @@ class Player extends wrk.GameEngine.DrawableEntity {
 
         var distToMove = wrk.v.copyMult(this.velocity, wrk.GameEngine.deltaTime);
         wrk.v.add(this.localPosition, distToMove);
+
+        this.interactWithWorld();
+    }
+
+    // Interaction with world components
+    // ---------------------------------
+    
+
+    interactWithWall(wall) {
+        if (this.isTouching(wall)) {
+            var collisionSide = this.collisionSide(wall);
+
+            switch (collisionSide) {
+                case 'left':
+                    var overlap = wall.bottomRightPos.x - this.topLeftPos.x;
+                    this.localPosition.x += overlap;
+                    break;
+
+                case 'right':
+                    var overlap = this.bottomRightPos.x - wall.topLeftPos.x;
+                    this.localPosition.x -= overlap;
+                    break;
+
+                case 'top':
+                    var overlap = this.topLeftPos.y - wall.bottomRightPos.y;
+                    this.localPosition.y -= overlap;
+                    break;
+
+                case 'bottom':
+                    var overlap = wall.topLeftPos.y - this.bottomRightPos.y;
+                    this.localPosition.y += overlap + 1;
+                    this.velocity.y = 0;
+                    break;
+            }
+        }
+    }
+
+    interactWithPortal(portal) {
+        if (this.isTouching(portal)) portal.onCollidePlayer(this);
+    }
+
+    interactWithSpike(spike) {
+        if (this.isTouching(spike)) {
+            alert('Ouch');
+            this.velocity = wrk.v(0, -300);
+            this.direction = 'stopped';
+        }
     }
 }
