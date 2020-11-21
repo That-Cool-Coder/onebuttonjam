@@ -13,4 +13,6 @@ else {
 
 wrk.GameEngine.init(config.targetSize, scale, config.bgColor);
 
-var mainScene = new World();
+var scene = new PlayScreen();
+
+wrk.GameEngine.selectScene(scene);

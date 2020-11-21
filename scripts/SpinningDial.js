@@ -3,7 +3,7 @@ class SpinningDial extends wrk.GameEngine.Entity {
     static arrowTexture = wrk.GameEngine.Texture.fromUrl('assets/dialArrow.png');
     static arrowAspectRatio = 1;
 
-    spinSpeed = wrk.PI;
+    spinSpeed = wrk.PI * 1.5;
 
     constructor(localPosition, radius, localAngle) {
         super('spinning dial', localPosition, localAngle);
@@ -17,7 +17,7 @@ class SpinningDial extends wrk.GameEngine.Entity {
         
         var arrowSize = wrk.v(this.radius * SpinningDial.arrowAspectRatio, this.radius);
         this.arrow = new wrk.GameEngine.DrawableEntity('dial arrow',
-            wrk.v(0, 0), wrk.v(0), SpinningDial.arrowTexture, arrowSize, wrk.v(0.5, 0));
+            wrk.v(0, 0), 0, SpinningDial.arrowTexture, arrowSize, wrk.v(0.5, 1));
         this.addChild(this.arrow);
     }
 
