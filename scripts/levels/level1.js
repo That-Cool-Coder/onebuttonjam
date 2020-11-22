@@ -1,7 +1,7 @@
 // Like json but loaded as js
 
 const level1 = {
-    playerStartPosition : wrk.v(200, 0),
+    playerStartPosition : wrk.v(200, 400),
     backgroundType : 'image',
     backgroundTexture : wrk.GameEngine.Texture.fromUrl('assets/background2.png'),
     environmentItems : [

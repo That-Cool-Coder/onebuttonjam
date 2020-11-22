@@ -48,6 +48,7 @@ class World extends wrk.GameEngine.Entity {
 
     loadLevel(levelData) {
         this.movePlayerTo(levelData.playerStartPosition);
+        this.player.reset();
 
         if (levelData.backgroundType == 'image') {
             this.background.setTexture(levelData.backgroundTexture);
@@ -81,6 +82,9 @@ class World extends wrk.GameEngine.Entity {
                 return item;
             case 'portal':
                 var item = new Portal(item.position, item.angle, item.size, item.color);
+                return item;
+            case 'levelEnd':
+                var item = new LevelEnd(item.position, item.direction);
                 return item;
             case 'label':
                 var item = new Label(item.text, item.position, item.direction, item.light);

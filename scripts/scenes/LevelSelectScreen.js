@@ -7,7 +7,10 @@ class LevelSelectScreen extends wrk.GameEngine.Scene {
         this.createBackground();
         this.createTitle();
         this.createBackButton();
-        this.createLevelButtons();
+
+        this.levelButtonHolder = new wrk.GameEngine.Entity('level button holder',
+            wrk.v(0, 0), 0);
+        this.addChild(this.levelButtonHolder);
     }
     
     createBackground() {
@@ -39,22 +42,37 @@ class LevelSelectScreen extends wrk.GameEngine.Scene {
     }
 
     createLevelButtons() {
+
         var row = 0;
         var col = 1;
         var columnWidth = wrk.GameEngine.canvasSize.x / (this.levelsPerRow + 1);
         var topRowY = 150;
         var rowHeight = 75;
 
-        levels.forEach((level, idx) => {
+        // use a for loop to allow break
+        for (var i = 0; i < levels.length; i ++) {
             var pos = wrk.v(col * columnWidth, row * rowHeight + topRowY);
-            var button = new LevelButton(idx, pos);
-            this.addChild(button);
+            var button = new LevelButton(i, pos);
+            this.levelButtonHolder.addChild(button);
+            
+            // If this is the end of the levels that we will show, then break
+            if (i == getHighestLevelUnlocked()) {
+                break;
+            }
 
             col += 1;
             if (col > this.levelsPerRow) {
                 col = 0;
                 row += 1;
             }
-        })
+        }
+    }
+
+    select(pixiApp) {
+        var inheritedFunc = wrk.GameEngine.Scene.prototype.select.bind(this);
+        inheritedFunc(pixiApp);
+
+        this.levelButtonHolder.removeChildren();
+        this.createLevelButtons();
     }
 }

@@ -1,6 +1,7 @@
 // Like json but loaded as js
 
 const level0 = {
+    number : 0,
     playerStartPosition : wrk.v(0, 0),
     backgroundType : 'image',
     backgroundTexture : wrk.GameEngine.Texture.fromUrl('assets/background2.png'),
@@ -38,7 +39,7 @@ const level0 = {
             type : 'label',
             position : wrk.v(0, -100),
             direction : 'up',
-            text : 'Use the compass to\nmove left and right (fixme)'
+            text : 'Use the compass to\nmove left and right.\nTo stop, press space when the arrow is pointing down (fixme)'
         },
         // floor
         {
@@ -82,12 +83,11 @@ const level0 = {
             direction : 'up',
             size : wrk.v(300, 50)
         },
-        // floor
+        // end of level
         {
-            type : 'rockWall',
-            position : wrk.v(1500, 25),
-            direction : 'up',
-            size : wrk.v(300, 50)
+            type : 'levelEnd',
+            position : wrk.v(1200, -50),
+            direction : 'up'
         }
     ]
 }
