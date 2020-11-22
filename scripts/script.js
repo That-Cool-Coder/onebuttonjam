@@ -13,6 +13,8 @@ else {
 
 wrk.GameEngine.init(config.targetSize, scale, config.bgColor);
 
-var scene = new PlayScreen();
+var titleScreen = new TitleScreen();
+var levelSelectScreen = new LevelSelectScreen();
+var playScreen = new PlayScreen();
 
-wrk.GameEngine.selectScene(scene);
+wrk.GameEngine.selectScene(titleScreen);

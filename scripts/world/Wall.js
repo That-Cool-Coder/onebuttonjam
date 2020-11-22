@@ -1,15 +1,16 @@
-class Wall extends WorldComponent {
+class Wall extends EnvironmentItem {
     static textures = [];
     static textureAspectRatios = [];
 
-    constructor(localPosition, size) {
+    constructor(localPosition, localDirection, size) {
 
         // Don't load textures until an object is actually made
         if (Wall.textures.length == 0) {
             Wall.loadTextures();
         }
 
-        super('wall', 'wall', localPosition, wrk.PI, size, Wall.findTexture(size), size);
+        super('wall', 'wall', localPosition, localDirection,
+            size, Wall.findTexture(size), size, true);
     }
 
     static loadTextures() {

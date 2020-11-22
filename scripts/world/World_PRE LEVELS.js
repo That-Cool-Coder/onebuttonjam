@@ -16,9 +16,12 @@ class World extends wrk.GameEngine.Entity {
         this.worldObjectHolder.addChild(p);
         this.worldObjectHolder.addChild(p2);
 
-        var texture = wrk.GameEngine.Texture.fromUrl('assets/playerLeft.png');
+        var textures = {
+            left : wrk.GameEngine.Texture.fromUrl('assets/playerLeft.png'),
+            right : wrk.GameEngine.Texture.fromUrl('assets/playerRight.png'),
+        };
         this.player = new Player('Main player', this.playerStartPos, wrk.PI,
-            texture, wrk.v(30, 60), playerControllerDial, this.worldObjectHolder.children);
+            textures, wrk.v(30, 60), playerControllerDial, this.worldObjectHolder.children);
         this.addChild(this.player);
 
         this.previousPlayerPositions = []; // oldest at start

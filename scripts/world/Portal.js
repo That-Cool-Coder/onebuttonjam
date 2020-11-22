@@ -1,4 +1,4 @@
-class Portal extends WorldComponent {
+class Portal extends EnvironmentItem {
 
     cooldownTime = 1000;
 

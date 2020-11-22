@@ -1,5 +1,5 @@
 class Player extends wrk.GameEngine.DrawableEntity {
-    jumpStrength = 400;  
+    jumpStrength = 500;  
     gravityStrength = 700;
 
     topSpeed = 200;
@@ -10,16 +10,24 @@ class Player extends wrk.GameEngine.DrawableEntity {
 
     worldComponentInteractions = {
         'wall' : obj => this.interactWithWall(obj),
+        'rockWall' : obj => this.interactWithWall(obj),
         'portal' : obj => this.interactWithPortal(obj),
         'spike' : obj => this.interactWithSpike(obj),
+        'decoration' : () => {},
+        'label' : () => {}
     }
 
-    constructor(name, localPosition, localAngle, texture, textureSize, controllerDial,
-        worldComponents) {
-
-        super(name, localPosition, localAngle, texture, textureSize);
+    constructor(name, localPosition, localAngle, textures, textureSize, controllerDial,
+        environment) {
         
-        this.setWorldComponents(worldComponents);
+        // Textures should be dict with values 'left', 'right', 'hurtLeft', 'hurtRight'
+        // Environment should be a wrk.GameEngine.Entity with EnvironmentItems inside
+
+        super(name, localPosition, localAngle, textures.left, textureSize);
+
+        this.textures = textures;
+        
+        this.updateEnvironment(environment);
 
         this.spaceDownLastFrame = false;
 
@@ -36,12 +44,26 @@ class Player extends wrk.GameEngine.DrawableEntity {
         return wrk.v.copyAdd(this.globalPosition, wrk.v.copyDiv(this.colliderSize, 2));
     }
 
+    rearrangeCorners(topLeftCorner, bottomRightCorner) {
+        // Rearrange the corners so that lower x is to the left and lower y is up
+
+        var newTopLeft = wrk.v(wrk.min(topLeftCorner.x, bottomRightCorner.x),
+            wrk.min(topLeftCorner.y, bottomRightCorner.y));
+        var newBottomRight = wrk.v(wrk.max(topLeftCorner.x, bottomRightCorner.x),
+            wrk.max(topLeftCorner.y, bottomRightCorner.y));
+
+        return [newTopLeft, newBottomRight];
+    }
+
     isTouching(component) {
         // Put these in in vars as they are recursive getters
         var selfTopLeft = this.topLeftPos;
         var selfBottomRight = this.bottomRightPos;
         var otherTopLeft = component.topLeftPos;
         var otherBottomRight = component.bottomRightPos;
+
+        //[otherTopLeft, otherBottomRight] =
+            //this.rearrangeCorners(otherTopLeft, otherBottomRight);
         
         return rectRectCollision(selfTopLeft, selfBottomRight, otherTopLeft, otherBottomRight);
     }
@@ -51,9 +73,15 @@ class Player extends wrk.GameEngine.DrawableEntity {
         // Put these in in vars as they are recursive getters
         var selfTopLeft = this.topLeftPos;
         var componentTopLeft = component.topLeftPos;
+        var componentBottomRight = component.bottomRightPos;
+
+        //[componentTopLeft, componentBottomRight] =
+            //this.rearrangeCorners(componentTopLeft, componentBottomRight);
+
+        var componentColliderSize = wrk.v.copySub(componentBottomRight, componentTopLeft);
 
         return rectRectCollisionSide(selfTopLeft, this.colliderSize,
-            componentTopLeft, component.colliderSize);
+            componentTopLeft, componentColliderSize);
     }
 
     checkControl() {
@@ -72,12 +100,14 @@ class Player extends wrk.GameEngine.DrawableEntity {
                 }
                 else if (crntAngle >= eigthTurn && crntAngle < eigthTurn * 3) {
                     this.direction = 'right';
+                    this.setTexture(this.textures.right);
                 }
                 else if (crntAngle >= eigthTurn * 3 && crntAngle < eigthTurn * 5) {
                     this.direction = 'stopped';
                 }
                 else {
                     this.direction = 'left';
+                    this.setTexture(this.textures.left);
                 }
             }
             this.spaceDownLastFrame = true;
@@ -91,8 +121,8 @@ class Player extends wrk.GameEngine.DrawableEntity {
 
         // Use a for...of instead of a foreach to allow break
         var grounded = false;
-        for (var component of this.worldComponents) {
-            if (component.type == 'wall') {
+        for (var component of this.environment.children) {
+            if (component.isWalkable) {
                 if (this.collisionSide(component) == 'bottom') {
                     grounded = true;
                     break;
@@ -151,13 +181,13 @@ class Player extends wrk.GameEngine.DrawableEntity {
     }
 
     interactWithWorld() {
-        this.worldComponents.forEach(component => {
+        this.environment.children.forEach(component => {
             this.worldComponentInteractions[component.type](component);
         })
     }
 
-    setWorldComponents(components) {
-        this.worldComponents = components;
+    updateEnvironment(environment) {
+        this.environment = environment;
     }
 
     debugKeybinds() {
@@ -207,23 +237,23 @@ class Player extends wrk.GameEngine.DrawableEntity {
             switch (collisionSide) {
                 case 'left':
                     var overlap = wall.bottomRightPos.x - this.topLeftPos.x;
-                    this.localPosition.x += overlap;
+                    this.localPosition.x += overlap + 3;
                     break;
 
                 case 'right':
                     var overlap = this.bottomRightPos.x - wall.topLeftPos.x;
-                    this.localPosition.x -= overlap;
+                    this.localPosition.x -= overlap + 3;
                     break;
 
                 case 'top':
                     var overlap = this.topLeftPos.y - wall.bottomRightPos.y;
-                    this.localPosition.y -= overlap;
+                    this.localPosition.y -= overlap + 3;
                     break;
 
                 case 'bottom':
                     var overlap = wall.topLeftPos.y - this.bottomRightPos.y;
-                    this.localPosition.y += overlap + 1;
-                    this.velocity.y = 0;
+                    this.localPosition.y += overlap;
+                    this.velocity.y = 5;
                     break;
             }
         }
@@ -235,9 +265,17 @@ class Player extends wrk.GameEngine.DrawableEntity {
 
     interactWithSpike(spike) {
         if (this.isTouching(spike)) {
-            alert('Ouch');
             this.velocity = wrk.v(0, -300);
             this.direction = 'stopped';
+
+            if (this.sprite.texture == this.textures.left ||
+                this.sprite.texture == this.textures.hurtLeft) {
+                
+                this.setTexture(this.textures.hurtLeft);
+            }
+            else {
+                this.setTexture(this.textures.hurtRight);
+            }
         }
     }
 }
