@@ -2,6 +2,7 @@
 
 const level1 = {
     playerStartPosition : wrk.v(200, 400),
+    fallOffHeight : 1000,
     backgroundType : 'image',
     backgroundTexture : wrk.GameEngine.Texture.fromUrl('assets/background2.png'),
     environmentItems : [

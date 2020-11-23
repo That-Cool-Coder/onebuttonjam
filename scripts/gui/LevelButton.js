@@ -20,7 +20,7 @@ class LevelButton extends wrk.GameEngine.Button {
 
         this.mouseUpCallbacks.add(() => {
             playScreen.startLevel(levels[this.levelNumber]);
-            wrk.GameEngine.selectScene(playScreen);
+            fadeToScene(playScreen);
         })
     }
 

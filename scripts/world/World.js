@@ -49,6 +49,7 @@ class World extends wrk.GameEngine.Entity {
     loadLevel(levelData) {
         this.movePlayerTo(levelData.playerStartPosition);
         this.player.reset();
+        this.crntLevel = levelData;
 
         if (levelData.backgroundType == 'image') {
             this.background.setTexture(levelData.backgroundTexture);
@@ -63,6 +64,8 @@ class World extends wrk.GameEngine.Entity {
         levelData.environmentItems.forEach(item => {
             this.environment.addChild(this.loadItem(item));
         });
+
+        this.environment.fallOffHeight = levelData.fallOffHeight;
 
         // Move player to front
         this.removeChild(this.player);

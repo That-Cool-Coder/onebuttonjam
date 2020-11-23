@@ -1,5 +1,7 @@
 class LevelSelectScreen extends wrk.GameEngine.Scene {
     levelsPerRow = 5;
+    backButtonPos = wrk.v(95, 50);
+    backButtonSize = wrk.v(150, 50);
 
     constructor() {
         super('level select screen');
@@ -22,21 +24,19 @@ class LevelSelectScreen extends wrk.GameEngine.Scene {
     }
 
     createTitle() {
-        
         var pos = wrk.v(wrk.GameEngine.canvasSize.x / 2, 50);
         var label = new wrk.GameEngine.Label('level select header', 'Level select',
-            pos, wrk.PI,
-            {fontSize : 30, fill : 0x9cb7e7, stroke : 0x000000, strokeThickness : 2});
+            pos, wrk.PI, config.headingTextFormat);
         this.addChild(label);
     }
 
     createBackButton() {
-        var pos = wrk.v(95, 50);
-        var button = new wrk.GameEngine.Button('back button', pos, wrk.PI, wrk.v(150, 50),
+        var button = new wrk.GameEngine.Button('back button', this.backButtonPos,
+            wrk.PI, this.backButtonSize,
             wrk.GameEngine.Texture.fromUrl('assets/button3x1.png'),
-            'Main menu', {fontSize : 25, fill : 0x9cb7e7});
+            'Main menu', config.buttonTextFormat);
         button.mouseUpCallbacks.add(() => {
-            wrk.GameEngine.selectScene(titleScreen);
+            fadeToScene(titleScreen);
         });
         this.addChild(button);
     }

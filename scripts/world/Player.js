@@ -37,6 +37,22 @@ class Player extends wrk.GameEngine.DrawableEntity {
         this.spaceDownLastFrame = false;
         this.velocity = wrk.v(0, 0);
         this.direction = 'stopped'; // right left or stopped
+        this.setFrozen(false);
+        this.setWorldInteraction(true);
+    }
+
+    setFrozen(state) {
+        this.frozen = state;
+    }
+
+    setWorldInteraction(state) {
+        this.worldInteraction = state;
+    }
+
+    finishLevel() {
+        this.setFrozen(true);
+        unlockNextLevel();
+        fadeToScene(levelSelectScreen);
     }
 
     get topLeftPos() {
@@ -118,6 +134,13 @@ class Player extends wrk.GameEngine.DrawableEntity {
         this.isGrounded = grounded;
     }
 
+    checkFallenOffWorld() {
+        if (this.localPosition.y > this.environment.fallOffHeight) {
+            this.setFrozen(true);
+            fadeToScene(levelSelectScreen);
+        }
+    }
+
     fall() {
         if (! this.isGrounded) {
             this.velocity.y += this.gravityStrength * wrk.GameEngine.deltaTime;
@@ -185,31 +208,37 @@ class Player extends wrk.GameEngine.DrawableEntity {
     }
 
     update() {
-        this.checkGrounded();
+        if (! this.frozen) {
+            this.checkGrounded();
 
-        this.fall();
-        this.checkControl();
+            this.checkFallenOffWorld()
 
-        this.debugKeybinds();
+            this.fall();
+            this.checkControl();
 
-        //this.groundedDebugTint();
+            this.debugKeybinds();
 
-        switch(this.direction) {
-            case 'left':
-                this.moveLeft();
-                break;
-            case 'right':
-                this.moveRight();
-                break;
-            case 'stopped':
-                this.stop();
-                break;
+            //this.groundedDebugTint();
+
+            switch(this.direction) {
+                case 'left':
+                    this.moveLeft();
+                    break;
+                case 'right':
+                    this.moveRight();
+                    break;
+                case 'stopped':
+                    this.stop();
+                    break;
+            }
+
+            var distToMove = wrk.v.copyMult(this.velocity, wrk.GameEngine.deltaTime);
+            wrk.v.add(this.localPosition, distToMove);
+
+            if (this.worldInteraction) {
+                this.interactWithWorld();
+            }
         }
-
-        var distToMove = wrk.v.copyMult(this.velocity, wrk.GameEngine.deltaTime);
-        wrk.v.add(this.localPosition, distToMove);
-
-        this.interactWithWorld();
     }
 
     // Interaction with world components
@@ -262,13 +291,18 @@ class Player extends wrk.GameEngine.DrawableEntity {
             else {
                 this.setTexture(this.textures.hurtRight);
             }
+
+            this.setWorldInteraction(false);
+            setTimeout(() => {
+                playScreen.restartLevel()
+                fadeToScene(playScreen);
+            }, 1000);
         }
     }
 
     interactWithLevelEnd(levelEnd) {
         if (this.isTouching(levelEnd)) {
-            unlockNextLevel();
-            wrk.GameEngine.selectScene(levelSelectScreen);
+            this.finishLevel();
         }
     }
 }

@@ -14,11 +14,12 @@ class PlayScreen extends wrk.GameEngine.Scene {
 
         // Remove and replace hud to make it be on top of the world
         this.removeChild(this.hud);
-
-        this.crntLevelNumber = level.number;
     
+        this.crntLevel = level;
         this.world.loadLevel(level);
 
         this.addChild(this.hud);
     }
+
+    restartLevel
 }
