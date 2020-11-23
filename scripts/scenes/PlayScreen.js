@@ -21,5 +21,10 @@ class PlayScreen extends wrk.GameEngine.Scene {
         this.addChild(this.hud);
     }
 
-    restartLevel
+    restartLevel() {
+        fadeIntoBlack().then(() => {
+            this.startLevel(this.crntLevel);
+            fadeOutOfBlack();
+        })
+    }
 }

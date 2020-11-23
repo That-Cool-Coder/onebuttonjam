@@ -6,8 +6,8 @@ class Label extends wrk.GameEngine.Label {
         'down' : 0
     }
 
-    lightFormat = {fontSize : 25, fill : 0xffffff};
-    darkFormat = {fontSize : 25, fill : 0x000000};
+    lightFormat = {fontSize : 18, fill : 0xffffff, align : 'center'};
+    darkFormat = {fontSize : 18, fill : 0x000000, align : 'center'};
 
     /** Like an EnvironmentItem but it is text. */
     constructor(text, localPosition, direction, light=true) {

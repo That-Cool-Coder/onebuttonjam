@@ -18,7 +18,7 @@ class TitleScreen extends wrk.GameEngine.Scene {
         var playButton = new wrk.GameEngine.Button('play button',
             wrk.v.copyDiv(wrk.GameEngine.canvasSize, 2), wrk.PI, wrk.v(100, 50),
             wrk.GameEngine.Texture.fromUrl('assets/button2x1.png'), 'Play',
-            config.headingTextFormat);
+            config.buttonTextFormat);
 
         playButton.mouseUpCallbacks.add(() => {
             fadeToScene(levelSelectScreen);

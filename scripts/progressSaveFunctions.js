@@ -18,7 +18,7 @@ function resetProgress() {
 }
 
 function unlockNextLevel() {
-    var crntLevelNum = playScreen.world.crntLevel.number;
+    var crntLevelNum = playScreen.crntLevel.number;
     var previousHighestLevelUnlocked = getHighestLevelUnlocked();
     if (crntLevelNum == previousHighestLevelUnlocked) {
         setHighestLevelUnlocked(crntLevelNum + 1);

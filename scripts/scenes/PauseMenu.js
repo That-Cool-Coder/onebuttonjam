@@ -1,6 +1,11 @@
 class PauseMenu extends wrk.GameEngine.Scene {
-    resumeButtonPosFromCenter = wrk.v(0, 100);
-    resumeButtonSize = wrk.v(100, 50);
+    headingPos = wrk.v(wrk.GameEngine.canvasSize.x / 2, 150);
+
+    quitLevelButtonPos = wrk.v(wrk.GameEngine.canvasSize.x / 2, 250);
+    quitLevelButtonSize = wrk.v(150, 50);
+
+    resumeButtonPos = wrk.v(wrk.GameEngine.canvasSize.x / 2, 350);
+    resumeButtonSize = wrk.v(125, 50);
 
     backgroundColor = 0x000000;
 
@@ -8,6 +13,8 @@ class PauseMenu extends wrk.GameEngine.Scene {
         super('pause menu', wrk.v(0, 0), 0);
 
         this.createBackground();
+        this.createHeading();
+        this.createQuitLevelButton();
         this.createResumeButton();
     }
 
@@ -19,11 +26,27 @@ class PauseMenu extends wrk.GameEngine.Scene {
         this.addChild(background);
     }
 
+    createHeading() {
+        var heading = new wrk.GameEngine.Label('pause menu heading', 'Paused',
+            this.headingPos, wrk.PI, config.headingTextFormat);
+        this.addChild(heading);
+    }
+
+    createQuitLevelButton() {
+        var texture = wrk.GameEngine.Texture.fromUrl('assets/button3x1.png');
+        var quitLevelButton = new wrk.GameEngine.Button('quit button',
+            this.quitLevelButtonPos, wrk.PI,
+            this.quitLevelButtonSize, texture, 'Quit level', config.buttonTextFormat);
+        quitLevelButton.mouseUpCallbacks.add(() => {
+            fadeToScene(levelSelectScreen);
+        });
+        this.addChild(quitLevelButton);
+    }
+
     createResumeButton() {
-        var texture = wrk.GameEngine.Texture.fromUrl('assets/button2x1.png');
-        var pos = wrk.v.copyAdd(wrk.v.copyDiv(wrk.GameEngine.canvasSize, 2),
-            this.resumeButtonPosFromCenter);
-        var resumeButton = new wrk.GameEngine.Button('resume button', pos, wrk.PI,
+        var texture = wrk.GameEngine.Texture.fromUrl('assets/button2.5x1.png');
+        var resumeButton = new wrk.GameEngine.Button('resume button',
+            this.resumeButtonPos, wrk.PI,
             this.resumeButtonSize, texture, 'Resume', config.buttonTextFormat);
         resumeButton.mouseUpCallbacks.add(() => {
             wrk.GameEngine.selectScene(playScreen);

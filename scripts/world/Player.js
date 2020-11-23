@@ -35,18 +35,18 @@ class Player extends wrk.GameEngine.DrawableEntity {
     reset() {
         this.setTexture(this.textures.right)
         this.spaceDownLastFrame = false;
+        this.setAlive(true);
         this.velocity = wrk.v(0, 0);
         this.direction = 'stopped'; // right left or stopped
         this.setFrozen(false);
-        this.setWorldInteraction(true);
     }
 
     setFrozen(state) {
         this.frozen = state;
     }
 
-    setWorldInteraction(state) {
-        this.worldInteraction = state;
+    setAlive(state) {
+        this.alive = state;
     }
 
     finishLevel() {
@@ -136,8 +136,8 @@ class Player extends wrk.GameEngine.DrawableEntity {
 
     checkFallenOffWorld() {
         if (this.localPosition.y > this.environment.fallOffHeight) {
-            this.setFrozen(true);
-            fadeToScene(levelSelectScreen);
+            this.setAlive(false);
+            playScreen.restartLevel();
         }
     }
 
@@ -211,34 +211,38 @@ class Player extends wrk.GameEngine.DrawableEntity {
         if (! this.frozen) {
             this.checkGrounded();
 
-            this.checkFallenOffWorld()
-
             this.fall();
-            this.checkControl();
+            
+            if (this.alive) {
 
-            this.debugKeybinds();
+                this.checkFallenOffWorld();
+                this.checkControl();
 
-            //this.groundedDebugTint();
+                //this.groundedDebugTint();
 
-            switch(this.direction) {
-                case 'left':
-                    this.moveLeft();
-                    break;
-                case 'right':
-                    this.moveRight();
-                    break;
-                case 'stopped':
-                    this.stop();
-                    break;
+                switch(this.direction) {
+                    case 'left':
+                        this.moveLeft();
+                        break;
+                    case 'right':
+                        this.moveRight();
+                        break;
+                    case 'stopped':
+                        this.stop();
+                        break;
+                }
             }
 
             var distToMove = wrk.v.copyMult(this.velocity, wrk.GameEngine.deltaTime);
             wrk.v.add(this.localPosition, distToMove);
 
-            if (this.worldInteraction) {
+            // This needs to be after to make it move out of blocks
+            if (this.alive) {
                 this.interactWithWorld();
             }
         }
+
+        this.debugKeybinds();
     }
 
     // Interaction with world components
@@ -292,10 +296,9 @@ class Player extends wrk.GameEngine.DrawableEntity {
                 this.setTexture(this.textures.hurtRight);
             }
 
-            this.setWorldInteraction(false);
+            this.setAlive(false);
             setTimeout(() => {
-                playScreen.restartLevel()
-                fadeToScene(playScreen);
+                playScreen.restartLevel();
             }, 1000);
         }
     }

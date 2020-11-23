@@ -25,7 +25,7 @@ class LevelSelectScreen extends wrk.GameEngine.Scene {
 
     createTitle() {
         var pos = wrk.v(wrk.GameEngine.canvasSize.x / 2, 50);
-        var label = new wrk.GameEngine.Label('level select header', 'Level select',
+        var label = new wrk.GameEngine.Label('level select header', 'Select a level',
             pos, wrk.PI, config.headingTextFormat);
         this.addChild(label);
     }

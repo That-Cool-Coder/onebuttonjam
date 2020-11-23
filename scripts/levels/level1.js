@@ -1,50 +1,24 @@
 // Like json but loaded as js
 
 const level1 = {
-    playerStartPosition : wrk.v(200, 400),
-    fallOffHeight : 1000,
+    playerStartPosition : wrk.v(0, 0),
+    fallOffHeight : 300,
     backgroundType : 'image',
     backgroundTexture : wrk.GameEngine.Texture.fromUrl('assets/background2.png'),
     environmentItems : [
+        // floor
         {
-            type : 'wall',
-            position : wrk.v(125, 500),
+            type : 'rockWall',
+            position : wrk.v(0, 25),
             direction : 'up',
-            size : wrk.v(250, 50)
-        },
-        {
-            type : 'wall',
-            position : wrk.v(375, 500),
-            direction : 'up',
-            size : wrk.v(250, 50)
-        },
-        {
-            type : 'wall',
-            position : wrk.v(340, 425),
-            direction : 'right',
-            size : wrk.v(100, 50)
-        },
-        {
-            type : 'wall',
-            position : wrk.v(390, 375),
-            direction : 'right',
-            size : wrk.v(200, 50)
-        },
-        {
-            type : 'wall',
-            position : wrk.v(440, 325),
-            direction : 'right',
             size : wrk.v(300, 50)
         },
+        // floor
         {
-            type : 'spike',
-            position : wrk.v(15, 460),
-            direction : 'up'
-        },
-        {
-            type : 'spike',
-            position : wrk.v(300, 460),
-            direction : 'up'
+            type : 'rockWall',
+            position : wrk.v(0, 25),
+            direction : 'up',
+            size : wrk.v(300, 50)
         }
     ]
 }

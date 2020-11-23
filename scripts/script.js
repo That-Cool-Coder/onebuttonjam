@@ -20,6 +20,13 @@ var pauseMenu = new PauseMenu();
 
 wrk.GameEngine.selectScene(titleScreen);
 
+// Pause the game if the tab changes to avoid massive deltaTime
+setInterval(() => {
+    if (document.hidden && wrk.GameEngine.crntScene == playScreen) {
+        wrk.GameEngine.selectScene(pauseMenu);
+    }
+}, 10)
+
 function testLevel(level) {
     playScreen.startLevel(level);
     wrk.GameEngine.selectScene(playScreen);
