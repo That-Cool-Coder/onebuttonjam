@@ -1,10 +1,14 @@
 import simpleFileManager as files
 import json
+from math import pi
 
 ROCK_WALL_COLOR = [270, 1, 0.6, 1]
 WALL_COLOR = [0, 0, 0.6, 1]
 START_POS_COLOR = [221.38263, 0.71006507, 0.98478514, 1]
 LEVEL_END_COLOR = [240, 1, 0.83333331, 1.0000000]
+SPIKE_COLOR = [0, 1, 1, 1]
+
+DIRECTION_TABLE = {}
 
 def loadLevel(levelPath, outputFile):
     # levelPath should be a .phn file exported from algodoo
@@ -52,6 +56,8 @@ def loadItem(item):
         return loadStartPos(itemDict)
     elif colorsMatch(itemDict['colorHSVA'], LEVEL_END_COLOR):
         return loadLevelEnd(itemDict)
+    elif colorsMatch(itemDict['colorHSVA'], SPIKE_COLOR):
+        return loadSpike(itemDict)
     else:
         return None
     
@@ -98,23 +104,29 @@ def loadSize(itemDict):
     size[1] = round(float(size[1]) * 100)
     return size
 
-def loadDirection(size, xIsLarger):
-    if xIsLarger:
-        if size[0] > size[1]:
-            return 'up'
-        else:
-            return 'right'
+def loadDirection(itemDict, xLarger):
+    angle = round(float(itemDict['angle']) % (pi * 2), 3)
+    size = loadSize(itemDict)
+    if angle == 0 or angle == round(pi, 3):
+        realSize = [size[0], size[1]]
     else:
-        if size[0] > size[1]:
-            return 'right'
+        realSize = [size[1], size[0]]
+    
+    if xLarger:
+        if realSize[0] >= realSize[1]:
+            return "'up'"
         else:
-            return 'up'
-        
+            return "'right'"
+    else:
+        if realSize[0] >= realSize[1]:
+            return "'right'"
+        else:
+            return "'up'"
 
 def loadRockWall(itemDict):
     position = loadPosition(itemDict)
     size = loadSize(itemDict)
-    direction = loadDirection(size, True)
+    direction = loadDirection(itemDict, True)
     result = \
 f'''        {{
             type : 'rockWall',
@@ -127,7 +139,7 @@ f'''        {{
 def loadWall(itemDict):
     position = loadPosition(itemDict)
     size = loadSize(itemDict)
-    direction = loadDirection(size, True)
+    direction = loadDirection(itemDict, True)
     result = \
 f'''        {{
             type : 'wall',
@@ -139,21 +151,29 @@ f'''        {{
 
 def loadStartPos(itemDict):
     position = loadPosition(itemDict)
-    size = loadSize(itemDict)
-    direction = loadDirection(size, True)
     result = f'startpos^playerStartPosition : wrk.v({position[0]}, {position[1]})'
     return result
 
 def loadLevelEnd(itemDict):
     position = loadPosition(itemDict)
-    size = loadSize(itemDict)
-    direction = loadDirection(size, True)
+    direction = loadDirection(itemDict, False)
     result = \
 f'''        {{
             type : 'levelEnd',
             position : wrk.v({position[0]}, {position[1]}),
             direction : {direction}
-    }}'''
+        }}'''
+    return result
+
+def loadSpike(itemDict):
+    position = loadPosition(itemDict)
+    direction = loadDirection(itemDict, True)
+    result = \
+f'''        {{
+            type : 'spike',
+            position : wrk.v({position[0]}, {position[1]}),
+            direction : {direction}
+        }}'''
     return result
 
 if __name__ == '__main__':

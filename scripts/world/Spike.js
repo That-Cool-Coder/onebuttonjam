@@ -1,7 +1,7 @@
 class Spike extends EnvironmentItem {
     static texture;
 
-    size = wrk.v(30, 30);
+    size = wrk.v(25, 25);
 
     constructor(localPosition, localDirection) {
         if (Spike.texture == undefined) {

@@ -106,9 +106,15 @@ const level0 = {
         // floor
         {
             type : 'rockWall',
-            position : wrk.v(1500, 25),
+            position : wrk.v(1400, 25),
             direction : 'up',
             size : wrk.v(300, 50)
+        },
+        // test spike
+        {
+            type : 'spike',
+            position : wrk.v(1500, -12.5),
+            direction : 'up'
         },
         // side wall at end
         {
