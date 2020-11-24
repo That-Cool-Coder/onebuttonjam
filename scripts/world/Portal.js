@@ -29,8 +29,8 @@ class Portal extends EnvironmentItem {
     }
 
     static loadTextures() {
-        Portal.baseTexture = wrk.GameEngine.Texture.fromUrl('assets/portalBase.png');
-        Portal.centerTexture = wrk.GameEngine.Texture.fromUrl('assets/portalCenter.png');
+        Portal.baseTexture = wrk.GameEngine.Texture.fromUrl('assets/world/portal/portalBase.png');
+        Portal.centerTexture = wrk.GameEngine.Texture.fromUrl('assets/world/portal/portalCenter.png');
     }
 
     setColor(color) {

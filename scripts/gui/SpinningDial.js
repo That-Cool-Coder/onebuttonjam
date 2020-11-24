@@ -1,6 +1,6 @@
 class SpinningDial extends wrk.GameEngine.Entity {
-    static backgroundTexture = wrk.GameEngine.Texture.fromUrl('assets/dial.png');
-    static arrowTexture = wrk.GameEngine.Texture.fromUrl('assets/dialArrow.png');
+    static backgroundTexture = wrk.GameEngine.Texture.fromUrl('assets/ui/dial.png');
+    static arrowTexture = wrk.GameEngine.Texture.fromUrl('assets/ui/dialArrow.png');
     static arrowAspectRatio = 1;
 
     spinSpeed = wrk.PI * 1.5;

@@ -14,17 +14,17 @@ class Wall extends EnvironmentItem {
     }
 
     static loadTextures() {
-        Wall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/wall1x1.png'));
+        Wall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/world/wall/wall1x1.png'));
         Wall.textureAspectRatios.push(1);
-        Wall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/wall2x1.png'));
+        Wall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/world/wall/wall2x1.png'));
         Wall.textureAspectRatios.push(2);
-        Wall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/wall3x1.png'));
+        Wall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/world/wall/wall3x1.png'));
         Wall.textureAspectRatios.push(3);
-        Wall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/wall4x1.png'));
+        Wall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/world/wall/wall4x1.png'));
         Wall.textureAspectRatios.push(4);
-        Wall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/wall5x1.png'));
+        Wall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/world/wall/wall5x1.png'));
         Wall.textureAspectRatios.push(5);
-        Wall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/wall6x1.png'));
+        Wall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/world/wall/wall6x1.png'));
         Wall.textureAspectRatios.push(6);
     }
 

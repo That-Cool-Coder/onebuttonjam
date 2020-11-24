@@ -16,6 +16,6 @@ class Spike extends EnvironmentItem {
     }
 
     static loadTexture() {
-        Spike.texture = wrk.GameEngine.Texture.fromUrl('assets/spike.png');
+        Spike.texture = wrk.GameEngine.Texture.fromUrl('assets/world/spike/spike.png');
     }
 }

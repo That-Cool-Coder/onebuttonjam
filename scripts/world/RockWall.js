@@ -21,11 +21,11 @@ class RockWall extends EnvironmentItem {
     }
 
     static loadTextures() {
-        RockWall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/rockWall2x1.png')); 
+        RockWall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/world/rockWall/rockWall2x1.png')); 
         RockWall.textureAspectRatios.push(2);
-        RockWall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/rockWall4x1.png')); 
+        RockWall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/world/rockWall/rockWall4x1.png')); 
         RockWall.textureAspectRatios.push(4);
-        RockWall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/rockWall1x1.png')); 
+        RockWall.textures.push(wrk.GameEngine.Texture.fromUrl('assets/world/rockWall/rockWall1x1.png')); 
         RockWall.textureAspectRatios.push(1);
     }
 
