@@ -95,7 +95,7 @@ const level0 = {
             type : 'label',
             position : wrk.v(1200, -150),
             direction : 'up',
-            text : 'Reach the *thing* to finish the level'
+            text : 'Reach the big portal to finish the level'
         },
         // end of level
         {

@@ -1,7 +1,7 @@
 class LevelEnd extends EnvironmentItem {
     static texture;
 
-    size = wrk.v(50, 100);
+    size = wrk.v(75, 150);
 
     constructor(localPosition, localDirection) {
         if (LevelEnd.texture == undefined) {
@@ -17,6 +17,6 @@ class LevelEnd extends EnvironmentItem {
     }
 
     static loadTexture() {
-        LevelEnd.texture = wrk.GameEngine.Texture.fromUrl('assets/levelEnd.png');
+        LevelEnd.texture = wrk.GameEngine.Texture.fromUrl('assets/world/levelEnd/levelEnd.png');
     }
 }

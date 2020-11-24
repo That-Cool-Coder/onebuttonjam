@@ -52,9 +52,16 @@ class World extends wrk.GameEngine.Entity {
         this.background.setTextureSize(wrk.GameEngine.canvasSize);
 
         this.environment.removeChildren();
+        var portals = [];
         levelData.environmentItems.forEach(item => {
-            this.environment.addChild(this.loadItem(item));
+            var loadedItem = this.loadItem(item)
+            this.environment.addChild(loadedItem);
+            if (loadedItem.type == 'portal') {
+                portals.push(loadedItem);
+            }
         });
+
+        this.linkPortals(portals);
 
         this.environment.fallOffHeight = levelData.fallOffHeight;
 
@@ -75,7 +82,7 @@ class World extends wrk.GameEngine.Entity {
                 var item = new Spike(item.position, item.direction);
                 return item;
             case 'portal':
-                var item = new Portal(item.position, item.angle, item.size, item.color);
+                var item = new Portal(item.position, item.direction, item.color);
                 return item;
             case 'levelEnd':
                 var item = new LevelEnd(item.position, item.direction);
@@ -88,6 +95,14 @@ class World extends wrk.GameEngine.Entity {
                     item.texture, item.size);
                 return item;
         }
+    }
+
+    linkPortals(portals) {
+        // Link the each portal to the portal that matches it
+
+        portals.forEach(portal => {
+            portal.linkToMatchingPortal(portals);
+        });
     }
 
     itemPositionToVector(pos) {

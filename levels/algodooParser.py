@@ -7,18 +7,20 @@ WALL_COLOR = [0, 0, 0.6, 1]
 START_POS_COLOR = [221.38263, 0.71006507, 0.98478514, 1]
 LEVEL_END_COLOR = [240, 1, 0.83333331, 1.0000000]
 SPIKE_COLOR = [0, 1, 1, 1]
+PORTAL_COLOR = [120, 1, 1, 1]
 
 DIRECTION_TABLE = {}
 
-def loadLevel(levelPath, outputFile):
+def loadLevel(levelPath, outputFile, header='{'):
     # levelPath should be a .phn file exported from algodoo
 
     rawFile = files.read(levelPath)
     items = rawFile.split('\n};')
 
-    body = ''
-
     startPos = 'playerStartPosition : wrk.v(0, 0)'
+
+    nonRockWalls = []
+    rockWalls = []
 
     for item in items:
         item = item.strip()
@@ -26,12 +28,22 @@ def loadLevel(levelPath, outputFile):
             result = loadItem(item)
             if result is not None:
                 if 'startpos' not in result:
-                    body += result + ',\n'
+                    if 'rockWall' in result:
+                        rockWalls.append(result)
+                    else:
+                        nonRockWalls.append(result)
                 else:
                     startPos = result.split('^')[1]
+    
+    body = ''
+    partList = rockWalls.copy()
+    partList.extend(nonRockWalls)
+
+    for part in partList:
+        body += part + ',\n'
 
     finalResult = \
-f'''{{
+f'''{header}
     {startPos},
     environmentItems : [
 {body}
@@ -58,6 +70,8 @@ def loadItem(item):
         return loadLevelEnd(itemDict)
     elif colorsMatch(itemDict['colorHSVA'], SPIKE_COLOR):
         return loadSpike(itemDict)
+    elif colorsMatch(itemDict['colorHSVA'], PORTAL_COLOR):
+        return loadPortal(itemDict)
     else:
         return None
     
@@ -104,7 +118,7 @@ def loadSize(itemDict):
     size[1] = round(float(size[1]) * 100)
     return size
 
-def loadDirection(itemDict, xLarger):
+def loadDirectionAndRealSize(itemDict, xLarger):
     angle = round(float(itemDict['angle']) % (pi * 2), 3)
     size = loadSize(itemDict)
     if angle == 0 or angle == round(pi, 3):
@@ -114,37 +128,39 @@ def loadDirection(itemDict, xLarger):
     
     if xLarger:
         if realSize[0] >= realSize[1]:
-            return "'up'"
+            return "'up'", [size[0], size[1]]
         else:
-            return "'right'"
+            return "'right'", [size[1], size[0]]
     else:
         if realSize[0] >= realSize[1]:
-            return "'right'"
+            return "'right'", realSize
         else:
-            return "'up'"
+            return "'up'", realSize
+
+def loadText(itemDict):
+    text = itemDict['text']
+    return text
 
 def loadRockWall(itemDict):
     position = loadPosition(itemDict)
-    size = loadSize(itemDict)
-    direction = loadDirection(itemDict, True)
+    direction, realSize = loadDirectionAndRealSize(itemDict, True)
     result = \
 f'''        {{
             type : 'rockWall',
             position : wrk.v({position[0]}, {position[1]}),
-            size : wrk.v({size[0]}, {size[1]}),
+            size : wrk.v({realSize[0]}, {realSize[1]}),
             direction : {direction}
         }}'''
     return result
 
 def loadWall(itemDict):
     position = loadPosition(itemDict)
-    size = loadSize(itemDict)
-    direction = loadDirection(itemDict, True)
+    direction, realSize = loadDirectionAndRealSize(itemDict, True)
     result = \
 f'''        {{
             type : 'wall',
             position : wrk.v({position[0]}, {position[1]}),
-            size : wrk.v({size[0]}, {size[1]}),
+            size : wrk.v({realSize[0]}, {realSize[1]}),
             direction : {direction}
         }}'''
     return result
@@ -156,7 +172,7 @@ def loadStartPos(itemDict):
 
 def loadLevelEnd(itemDict):
     position = loadPosition(itemDict)
-    direction = loadDirection(itemDict, False)
+    direction, realSize = loadDirectionAndRealSize(itemDict, False)
     result = \
 f'''        {{
             type : 'levelEnd',
@@ -167,7 +183,7 @@ f'''        {{
 
 def loadSpike(itemDict):
     position = loadPosition(itemDict)
-    direction = loadDirection(itemDict, True)
+    direction, realSize = loadDirectionAndRealSize(itemDict, True)
     result = \
 f'''        {{
             type : 'spike',
@@ -176,7 +192,21 @@ f'''        {{
         }}'''
     return result
 
+def loadPortal(itemDict):
+    position = loadPosition(itemDict)
+    direction, realSize = loadDirectionAndRealSize(itemDict, False)
+    color = loadText(itemDict)
+    result = \
+f'''        {{
+            type : 'portal',
+            position : wrk.v({position[0]}, {position[1]}),
+            direction : {direction},
+            color : {color}
+        }}'''
+    return result
+
 if __name__ == '__main__':
-    #filename = input('Enter name of .phn to parse: ')
-    filename = 'scene.phn'
-    loadLevel(filename, 'test.txt')
+    levelNumber = input('Enter level number: ')
+    filename = 'algodoolevels/' + levelNumber + '.phn'
+    header = files.read('headers/' + levelNumber + '.txt')
+    loadLevel(filename, 'level' + levelNumber + '.js', header=header)

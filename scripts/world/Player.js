@@ -43,7 +43,7 @@ class Player extends wrk.GameEngine.DrawableEntity {
 
     reset() {
         this.setTexture(this.textures.right)
-        this.spaceDownLastFrame = false;
+        this.triggeredLastFrame = false;
         this.setAlive(true);
         this.velocity = wrk.v(0, 0);
         this.direction = 'stopped'; // right left or stopped
@@ -99,7 +99,7 @@ class Player extends wrk.GameEngine.DrawableEntity {
         // Yes, this is singular. It's not called a one button jam for nothing.
 
         if (wrk.GameEngine.keyboard.keyIsDown('Space')) {
-            if (! this.spaceDownLastFrame) {
+            if (! this.triggeredLastFrame) {
                 var crntAngle = this.controllerDial.crntAngle % (wrk.PI * 2);
 
                 var quarterTurn = wrk.PI / 2;
@@ -120,11 +120,11 @@ class Player extends wrk.GameEngine.DrawableEntity {
                     this.direction = 'left';
                     this.setTexture(this.textures.left);
                 }
+                this.triggeredLastFrame = true;
             }
-            this.spaceDownLastFrame = true;
         }
         else {
-            this.spaceDownLastFrame = false;
+            this.triggeredLastFrame = false;
         }
     }
 
@@ -210,10 +210,22 @@ class Player extends wrk.GameEngine.DrawableEntity {
 
     debugKeybinds() {
         var speed = 5;
-        if (wrk.GameEngine.keyboard.keyIsDown('ArrowUp')) this.localPosition.y -= speed;
-        if (wrk.GameEngine.keyboard.keyIsDown('ArrowDown')) this.localPosition.y += speed;
-        if (wrk.GameEngine.keyboard.keyIsDown('ArrowLeft')) this.localPosition.x -= speed;
-        if (wrk.GameEngine.keyboard.keyIsDown('ArrowRight')) this.localPosition.x += speed;
+        if (wrk.GameEngine.keyboard.keyIsDown('ArrowUp')) {
+            this.localPosition.y -= speed;
+            this.velocity = wrk.v(0, 0);
+        }
+        if (wrk.GameEngine.keyboard.keyIsDown('ArrowDown')) {
+            this.localPosition.y += speed;
+            this.velocity = wrk.v(0, 0);
+        }
+        if (wrk.GameEngine.keyboard.keyIsDown('ArrowLeft')) {
+            this.localPosition.x -= speed;
+            this.velocity = wrk.v(0, 0);
+        }
+        if (wrk.GameEngine.keyboard.keyIsDown('ArrowRight')) {
+            this.localPosition.x += speed;
+            this.velocity = wrk.v(0, 0);
+        }
     }
 
     update() {
