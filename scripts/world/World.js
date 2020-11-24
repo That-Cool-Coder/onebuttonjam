@@ -15,7 +15,7 @@ class World extends wrk.GameEngine.Entity {
         this.addChild(this.environment);
 
         this.player = new Player('Main player', wrk.v(0, 0), wrk.PI,
-            this.loadPlayerTextures(), wrk.v(30, 60), playerControllerDial, this.environment);
+            playerControllerDial, this.environment);
         this.addChild(this.player);
 
         this.movePlayerTo(wrk.v(0, 0)); // temporary until level loading is in place
@@ -23,15 +23,6 @@ class World extends wrk.GameEngine.Entity {
 
     // Player
     // ------
-
-    loadPlayerTextures() {
-        return {
-            left : wrk.GameEngine.Texture.fromUrl('assets/playerLeft.png'),
-            right : wrk.GameEngine.Texture.fromUrl('assets/playerRight.png'),
-            hurtLeft : wrk.GameEngine.Texture.fromUrl('assets/playerHurtLeft.png'),
-            hurtRight : wrk.GameEngine.Texture.fromUrl('assets/playerHurtRight.png'),
-        };
-    }
 
     movePlayerTo(localPosition) {
         this.player.setLocalPosition(localPosition);

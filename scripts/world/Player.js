@@ -18,15 +18,24 @@ class Player extends wrk.GameEngine.DrawableEntity {
         'label' : () => {}
     }
 
-    constructor(name, localPosition, localAngle, textures, textureSize, controllerDial,
-        environment) {
-        
-        // Textures should be dict with values 'left', 'right', 'hurtLeft', 'hurtRight'
-        // Environment should be a wrk.GameEngine.Entity with EnvironmentItems inside
+    textureSize = wrk.v(30, 60);
 
-        super(name, localPosition, localAngle, textures.right, textureSize);
+    textures = {
+        left : wrk.GameEngine.Texture.fromUrl('assets/player/left.png'),
+        right : wrk.GameEngine.Texture.fromUrl('assets/player/right.png'),
+        hurtLeft : wrk.GameEngine.Texture.fromUrl('assets/player/hurtLeft.png'),
+        hurtRight : wrk.GameEngine.Texture.fromUrl('assets/player/hurtRight.png'),
+    };
 
-        this.textures = textures;
+    sounds = {
+        //die : new wrk.Sound('assets/player/die.mp3'),
+    };
+
+    constructor(name, localPosition, localAngle, controllerDial, environment) {
+
+        super(name, localPosition, localAngle, PIXI.Texture.WHITE, wrk.v(0, 0));
+
+        this.setTextureSize(this.textureSize);
         this.updateEnvironment(environment);
         this.controllerDial = controllerDial;
         this.reset();
@@ -285,6 +294,7 @@ class Player extends wrk.GameEngine.DrawableEntity {
     interactWithSpike(spike) {
         if (this.isTouching(spike)) {
             this.velocity = wrk.v(0, -300);
+            this.localPosition.y -= 20;
             this.direction = 'stopped';
 
             if (this.sprite.texture == this.textures.left ||

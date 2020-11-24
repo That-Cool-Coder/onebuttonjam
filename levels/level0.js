@@ -11,7 +11,7 @@ const level0 = {
     playerStartPosition : wrk.v(0, 0),
     fallOffHeight : 300,
     backgroundType : 'image',
-    backgroundTexture : wrk.GameEngine.Texture.fromUrl('assets/background2.png'),
+    backgroundTexture : wrk.GameEngine.Texture.fromUrl('assets/world/background2.png'),
     environmentItems : [
         // left side wall
         {
@@ -110,23 +110,17 @@ const level0 = {
             direction : 'up',
             size : wrk.v(300, 50)
         },
-        // test spike
-        {
-            type : 'spike',
-            position : wrk.v(1500, -12.5),
-            direction : 'up'
-        },
         // side wall at end
         {
             type : 'rockWall',
-            position : wrk.v(1625, -150),
+            position : wrk.v(1525, -150),
             direction : 'right',
             size : wrk.v(300, 50)
         },
         // side wall at end
         {
             type : 'rockWall',
-            position : wrk.v(1625, -450),
+            position : wrk.v(1525, -450),
             direction : 'right',
             size : wrk.v(300, 50)
         }

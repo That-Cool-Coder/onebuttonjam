@@ -31,7 +31,7 @@ class Hud extends wrk.GameEngine.Entity {
     }
 
     createPauseButton() {
-        var texture = wrk.GameEngine.Texture.fromUrl('assets/button2x1.png')
+        var texture = wrk.GameEngine.Texture.fromUrl('assets/ui/buttons/button2x1.png')
         var pauseButton = new wrk.GameEngine.Button('Pause button',
             this.pauseButtonPosFromTopLeft, wrk.PI,
             this.pauseButtonSize, texture, 'Pause', config.buttonTextFormat);

@@ -33,7 +33,7 @@ class PauseMenu extends wrk.GameEngine.Scene {
     }
 
     createQuitLevelButton() {
-        var texture = wrk.GameEngine.Texture.fromUrl('assets/button3x1.png');
+        var texture = wrk.GameEngine.Texture.fromUrl('assets/ui/buttons/button3x1.png');
         var quitLevelButton = new wrk.GameEngine.Button('quit button',
             this.quitLevelButtonPos, wrk.PI,
             this.quitLevelButtonSize, texture, 'Quit level', config.buttonTextFormat);
@@ -44,7 +44,7 @@ class PauseMenu extends wrk.GameEngine.Scene {
     }
 
     createResumeButton() {
-        var texture = wrk.GameEngine.Texture.fromUrl('assets/button2.5x1.png');
+        var texture = wrk.GameEngine.Texture.fromUrl('assets/ui/buttons/button2.5x1.png');
         var resumeButton = new wrk.GameEngine.Button('resume button',
             this.resumeButtonPos, wrk.PI,
             this.resumeButtonSize, texture, 'Resume', config.buttonTextFormat);

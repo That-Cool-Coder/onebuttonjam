@@ -1,7 +1,7 @@
 // Like json but loaded as js
 
-const level1 = {
-    number : 1,
+const level2 = {
+    number : 2,
     fallOffHeight : 300,
     backgroundType : 'image',
     backgroundTexture : wrk.GameEngine.Texture.fromUrl('assets/world/background2.png'),

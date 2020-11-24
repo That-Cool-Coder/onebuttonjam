@@ -18,7 +18,7 @@ class LevelSelectScreen extends wrk.GameEngine.Scene {
     createBackground() {
         var background = new wrk.GameEngine.DrawableEntity('title screen background',
             wrk.GameEngine.canvasSize, wrk.PI,
-            wrk.GameEngine.Texture.fromUrl('assets/background.png'), wrk.GameEngine.canvasSize,
+            wrk.GameEngine.Texture.fromUrl('assets/world/background.png'), wrk.GameEngine.canvasSize,
             wrk.v(1, 1));
         this.addChild(background);
     }
@@ -33,7 +33,7 @@ class LevelSelectScreen extends wrk.GameEngine.Scene {
     createBackButton() {
         var button = new wrk.GameEngine.Button('back button', this.backButtonPos,
             wrk.PI, this.backButtonSize,
-            wrk.GameEngine.Texture.fromUrl('assets/button3x1.png'),
+            wrk.GameEngine.Texture.fromUrl('assets/ui/buttons/button3x1.png'),
             'Main menu', config.buttonTextFormat);
         button.mouseUpCallbacks.add(() => {
             fadeToScene(titleScreen);
@@ -52,13 +52,9 @@ class LevelSelectScreen extends wrk.GameEngine.Scene {
         // use a for loop to allow break
         for (var i = 0; i < levels.length; i ++) {
             var pos = wrk.v(col * columnWidth, row * rowHeight + topRowY);
-            var button = new LevelButton(i, pos);
+            var isUnlocked = (i <= getHighestLevelUnlocked());
+            var button = new LevelButton(i, isUnlocked, pos);
             this.levelButtonHolder.addChild(button);
-            
-            // If this is the end of the levels that we will show, then break
-            if (i == getHighestLevelUnlocked()) {
-                break;
-            }
 
             col += 1;
             if (col > this.levelsPerRow) {
