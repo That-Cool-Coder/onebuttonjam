@@ -118,8 +118,24 @@ def loadSize(itemDict):
     size[1] = round(float(size[1]) * 100)
     return size
 
-def loadDirectionAndRealSize(itemDict, xLarger):
+def loadAngle(itemDict):
     angle = round(float(itemDict['angle']) % (pi * 2), 3)
+    return angle
+
+
+def loadDirection(itemDict):
+    angle = loadAngle(itemDict)
+    if angle == 0:
+        return "'up'"
+    elif angle == round(pi / 2, 3):
+        return "'right'"
+    elif angle == round(pi, 3):
+        return "'down'"
+    else:
+        return "'left'"
+
+def loadDirectionAndRealSize(itemDict, xLarger):
+    angle = loadAngle(itemDict)
     size = loadSize(itemDict)
     if angle == 0 or angle == round(pi, 3):
         realSize = [size[0], size[1]]
@@ -183,7 +199,8 @@ f'''        {{
 
 def loadSpike(itemDict):
     position = loadPosition(itemDict)
-    direction, realSize = loadDirectionAndRealSize(itemDict, True)
+    size = loadSize(itemDict)
+    direction = loadDirection(itemDict)
     result = \
 f'''        {{
             type : 'spike',

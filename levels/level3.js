@@ -39,44 +39,26 @@ const level3 = {
         },
         {
             type : 'rockWall',
+            position : wrk.v(1925, 25),
+            size : wrk.v(300, 50),
+            direction : 'up'
+        },
+        {
+            type : 'rockWall',
+            position : wrk.v(2225, 25),
+            size : wrk.v(300, 50),
+            direction : 'up'
+        },
+        {
+            type : 'rockWall',
+            position : wrk.v(2462, 25),
+            size : wrk.v(175, 50),
+            direction : 'up'
+        },
+        {
+            type : 'rockWall',
             position : wrk.v(1500, 25),
             size : wrk.v(300, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(1000, -525),
-            size : wrk.v(300, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(975, -575),
-            size : wrk.v(250, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(950, -625),
-            size : wrk.v(200, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(925, -675),
-            size : wrk.v(150, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(900, -725),
-            size : wrk.v(100, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(875, -775),
-            size : wrk.v(50, 50),
             direction : 'up'
         },
         {
@@ -236,49 +218,32 @@ const level3 = {
             direction : 'up'
         },
         {
-            type : 'levelEnd',
-            position : wrk.v(1238, -675),
-            direction : 'up'
-        },
-        {
             type : 'wall',
-            position : wrk.v(650, -525),
-            size : wrk.v(300, 50),
-            direction : 'up'
-        },
-        {
-            type : 'wall',
-            position : wrk.v(625, -575),
-            size : wrk.v(250, 50),
-            direction : 'up'
-        },
-        {
-            type : 'wall',
-            position : wrk.v(600, -625),
-            size : wrk.v(200, 50),
-            direction : 'up'
-        },
-        {
-            type : 'wall',
-            position : wrk.v(575, -675),
-            size : wrk.v(150, 50),
-            direction : 'up'
-        },
-        {
-            type : 'wall',
-            position : wrk.v(550, -725),
+            position : wrk.v(1600, -75),
             size : wrk.v(100, 50),
             direction : 'up'
         },
         {
             type : 'wall',
-            position : wrk.v(525, -775),
-            size : wrk.v(50, 50),
+            position : wrk.v(1525, -50),
+            size : wrk.v(100, 50),
+            direction : 'right'
+        },
+        {
+            type : 'levelEnd',
+            position : wrk.v(2338, -75),
             direction : 'up'
         },
         {
-            type : 'spike',
-            position : wrk.v(712, -312),
+            type : 'wall',
+            position : wrk.v(1850, -75),
+            size : wrk.v(150, 50),
+            direction : 'up'
+        },
+        {
+            type : 'wall',
+            position : wrk.v(1950, -25),
+            size : wrk.v(50, 50),
             direction : 'up'
         },
         // Thing warning you about spikes
@@ -287,6 +252,11 @@ const level3 = {
             position : wrk.v(688, -400),
             direction : 'up',
             text : 'Don\'t touch the spikes!'
+        },
+        {
+            type : 'spike',
+            position : wrk.v(712, -312),
+            direction : 'up'
         },
         {
             type : 'spike',
@@ -302,6 +272,21 @@ const level3 = {
             type : 'spike',
             position : wrk.v(1238, -12),
             direction : 'up'
+        },
+        {
+            type : 'spike',
+            position : wrk.v(1488, -63),
+            direction : 'left'
+        },
+        {
+            type : 'spike',
+            position : wrk.v(1488, -38),
+            direction : 'left'
+        },
+        {
+            type : 'spike',
+            position : wrk.v(1488, -13),
+            direction : 'left'
         },
         {
             type : 'spike',
@@ -335,14 +320,8 @@ const level3 = {
         },
         {
             type : 'spike',
-            position : wrk.v(1138, -612),
+            position : wrk.v(2162, -13),
             direction : 'up'
-        },
-        {
-            type : 'portal',
-            position : wrk.v(1325, -650),
-            direction : 'up',
-            color : "0xffff00"
         },
 
     ]

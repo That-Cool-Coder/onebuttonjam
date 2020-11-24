@@ -101,11 +101,12 @@ class Player extends wrk.GameEngine.DrawableEntity {
         if (wrk.GameEngine.keyboard.keyIsDown('Space') ||
             wrk.GameEngine.mouse.pointerDown) {
             if (! this.triggeredLastFrame) {
+                
+                // Increase it by a bit to make it seem more natural
+                crntAngle += 0.6;
 
                 // Stop the angle from being over 1 rotation
                 var crntAngle = this.controllerDial.crntAngle % (wrk.PI * 2)
-                // Increase it by a bit to make it seem more natural
-                crntAngle += 0.05;
 
                 var eigthTurn = wrk.PI / 4;
                 

@@ -19,7 +19,7 @@ class Portal extends EnvironmentItem {
         var diameter = wrk.min(this.textureSize.x, this.textureSize.y);
         this.center = new wrk.GameEngine.DrawableEntity('portal center',
             wrk.v(0, 0), 0, Portal.centerTexture, wrk.v(diameter, diameter));
-        //this.addChild(this.center);
+        this.addChild(this.center);
 
         this.lastUsed = -Infinity;
 
@@ -34,6 +34,7 @@ class Portal extends EnvironmentItem {
     }
 
     setColor(color) {
+        this.color = color;
         this.setTint(color);
     }
 
