@@ -31,3 +31,7 @@ function testLevel(level) {
     playScreen.startLevel(level);
     wrk.GameEngine.selectScene(playScreen);
 }
+
+const isDevVersion = false;
+
+console.log('This is test version #1');

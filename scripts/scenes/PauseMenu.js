@@ -1,10 +1,13 @@
 class PauseMenu extends wrk.GameEngine.Scene {
-    headingPos = wrk.v(wrk.GameEngine.canvasSize.x / 2, 150);
+    headingPos = wrk.v(wrk.GameEngine.canvasSize.x / 2, 100);
 
-    quitLevelButtonPos = wrk.v(wrk.GameEngine.canvasSize.x / 2, 250);
+    restartLevelButtonPos = wrk.v(wrk.GameEngine.canvasSize.x / 2, 200);
+    restartButtonSize = wrk.v(150, 50);
+
+    quitLevelButtonPos = wrk.v(wrk.GameEngine.canvasSize.x / 2, 300);
     quitLevelButtonSize = wrk.v(150, 50);
 
-    resumeButtonPos = wrk.v(wrk.GameEngine.canvasSize.x / 2, 350);
+    resumeButtonPos = wrk.v(wrk.GameEngine.canvasSize.x / 2, 400);
     resumeButtonSize = wrk.v(125, 50);
 
     backgroundColor = 0x000000;
@@ -14,6 +17,7 @@ class PauseMenu extends wrk.GameEngine.Scene {
 
         this.createBackground();
         this.createHeading();
+        this.createRestartLevelButton();
         this.createQuitLevelButton();
         this.createResumeButton();
     }
@@ -30,6 +34,19 @@ class PauseMenu extends wrk.GameEngine.Scene {
         var heading = new wrk.GameEngine.Label('pause menu heading', 'Paused',
             this.headingPos, wrk.PI, config.headingTextFormat);
         this.addChild(heading);
+    }
+
+    createRestartLevelButton() {
+        var texture = wrk.GameEngine.Texture.fromUrl('assets/ui/buttons/button3x1.png');
+        var restartLevelButton = new wrk.GameEngine.Button('restart button',
+            this.restartLevelButtonPos, wrk.PI,
+            this.restartButtonSize, texture, 'Restart level', config.buttonTextFormat);
+        restartLevelButton.mouseUpCallbacks.add(() => {
+            playScreen.world.player.setFrozen(true);
+            wrk.GameEngine.selectScene(playScreen);
+            playScreen.restartLevel();
+        });
+        this.addChild(restartLevelButton);
     }
 
     createQuitLevelButton() {

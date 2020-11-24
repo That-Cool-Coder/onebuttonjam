@@ -121,6 +121,13 @@ const level1 = {
             size : wrk.v(300, 50),
             direction : 'up'
         },
+        // Thing telling you to restart
+        {
+            type : 'label',
+            position : wrk.v(1070, -110),
+            direction : 'up',
+            text : 'If you get stuck, restart by clicking the pause button\nthen the restart button'
+        },
         {
             type : 'wall',
             position : wrk.v(1225, -175),
@@ -197,18 +204,6 @@ const level1 = {
             type : 'levelEnd',
             position : wrk.v(2462, -175),
             direction : 'up'
-        },
-        {
-            type : 'portal',
-            position : wrk.v(775, -250),
-            direction : 'up',
-            color : "0xffff00"
-        },
-        {
-            type : 'portal',
-            position : wrk.v(1175, -250),
-            direction : 'up',
-            color : "0xffff00"
         },
 
     ]

@@ -98,29 +98,36 @@ class Player extends wrk.GameEngine.DrawableEntity {
     checkControl() {
         // Yes, this is singular. It's not called a one button jam for nothing.
 
-        if (wrk.GameEngine.keyboard.keyIsDown('Space')) {
+        if (wrk.GameEngine.keyboard.keyIsDown('Space') ||
+            wrk.GameEngine.mouse.pointerDown) {
             if (! this.triggeredLastFrame) {
-                var crntAngle = this.controllerDial.crntAngle % (wrk.PI * 2);
 
-                var quarterTurn = wrk.PI / 2;
+                // Stop the angle from being over 1 rotation
+                var crntAngle = this.controllerDial.crntAngle % (wrk.PI * 2)
+                // Increase it by a bit to make it seem more natural
+                crntAngle += 0.05;
+
                 var eigthTurn = wrk.PI / 4;
                 
                 if ((crntAngle >= eigthTurn * 7 && crntAngle < wrk.PI * 2) ||
-                    (crntAngle >= 0 && crntAngle < eigthTurn)) {
+                    (crntAngle >= 0 && crntAngle < eigthTurn) && this.isGrounded) {
                     this.startJump();
+                    this.triggeredLastFrame = true;
                 }
                 else if (crntAngle >= eigthTurn && crntAngle < eigthTurn * 3) {
                     this.direction = 'right';
                     this.setTexture(this.textures.right);
+                    this.triggeredLastFrame = true;
                 }
                 else if (crntAngle >= eigthTurn * 3 && crntAngle < eigthTurn * 5) {
                     this.direction = 'stopped';
+                    this.triggeredLastFrame = true;
                 }
                 else {
                     this.direction = 'left';
                     this.setTexture(this.textures.left);
+                    this.triggeredLastFrame = true;
                 }
-                this.triggeredLastFrame = true;
             }
         }
         else {
@@ -239,8 +246,6 @@ class Player extends wrk.GameEngine.DrawableEntity {
                 this.checkFallenOffWorld();
                 this.checkControl();
 
-                //this.groundedDebugTint();
-
                 switch(this.direction) {
                     case 'left':
                         this.moveLeft();
@@ -263,7 +268,9 @@ class Player extends wrk.GameEngine.DrawableEntity {
             }
         }
 
-        this.debugKeybinds();
+        if (isDevVersion) {
+            this.debugKeybinds();
+        }
     }
 
     // Interaction with world components
@@ -277,22 +284,25 @@ class Player extends wrk.GameEngine.DrawableEntity {
             switch (collisionSide) {
                 case 'left':
                     var overlap = wall.bottomRightPos.x - this.topLeftPos.x;
-                    this.localPosition.x += overlap + 3;
+                    this.localPosition.x += overlap;
+                    this.velocity.x = 0;
                     break;
 
                 case 'right':
                     var overlap = this.bottomRightPos.x - wall.topLeftPos.x;
-                    this.localPosition.x -= overlap + 3;
+                    this.localPosition.x -= overlap;
+                    this.velocity.x = 0;
                     break;
 
                 case 'top':
-                    var overlap = this.topLeftPos.y - wall.bottomRightPos.y;
-                    this.localPosition.y -= overlap + 3;
+                    var overlap = wall.bottomRightPos.y - this.topLeftPos.y;
+                    this.localPosition.y += overlap + 2;
+                    this.velocity.y = 5;
                     break;
 
                 case 'bottom':
-                    var overlap = wall.topLeftPos.y - this.bottomRightPos.y;
-                    this.localPosition.y += overlap;
+                    var overlap = this.bottomRightPos.y - wall.topLeftPos.y;
+                    this.localPosition.y -= overlap;
                     this.velocity.y = 5;
                     break;
             }

@@ -1,5 +1,5 @@
 class LevelButton extends wrk.GameEngine.Button {
-    static texture;
+    static textures;
 
     disabledTint = 0xaaaaa;
 
@@ -8,13 +8,16 @@ class LevelButton extends wrk.GameEngine.Button {
     constructor(levelNumber, isUnlocked, localPosition) {
 
         // Don't load the texture until it is needed
-        if (LevelButton.texture == undefined) {
-            LevelButton.loadTexture();
+        if (LevelButton.textures == undefined) {
+            LevelButton.loadTextures();
         }
 
-        var format = {fontSize : 25, fill : 0x9cb7e7};
+        if (isUnlocked) var texture = LevelButton.textures.unlocked;
+        else var texture = LevelButton.textures.locked;
+
+
         super('level button #' + levelNumber, localPosition, wrk.PI, wrk.v(1, 1),
-            LevelButton.texture, levelNumber + 1, format);
+            texture, levelNumber + 1, config.buttonTextFormat);
 
         this.setTextureSize(this.size);
 
@@ -27,12 +30,12 @@ class LevelButton extends wrk.GameEngine.Button {
                 fadeToScene(playScreen);
             });
         }
-        else {
-            this.setTint(this.disabledTint);
-        }
     }
 
-    static loadTexture() {
-        LevelButton.texture = wrk.GameEngine.Texture.fromUrl('assets/ui/buttons/button1x1.png');
+    static loadTextures() {
+        LevelButton.textures = {
+            unlocked : wrk.GameEngine.Texture.fromUrl('assets/ui/buttons/button1x1.png'),
+            locked : wrk.GameEngine.Texture.fromUrl('assets/ui/buttons/button1x1disabled.png')
+        }
     }
 }

@@ -1,7 +1,7 @@
 // Like json but loaded as js
 
 var level0ControlPrompt = 'See that spinning arrow in the bottom right corner?\n' + 
-    'Press the spacebar to trigger it.\n' + 
+    'Press the spacebar, click or tap to trigger it.\n' + 
     'Trigger when the arrow is pointing left to start walking left.\n' +
     'Trigger when the arrow is pointing right to start walking right.\n' + 
     'Trigger when the arrow is pointing down to stop walking.';
