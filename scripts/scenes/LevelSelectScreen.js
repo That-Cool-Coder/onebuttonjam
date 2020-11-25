@@ -58,7 +58,7 @@ class LevelSelectScreen extends wrk.GameEngine.Scene {
 
             col += 1;
             if (col > this.levelsPerRow) {
-                col = 0;
+                col = 1;
                 row += 1;
             }
         }

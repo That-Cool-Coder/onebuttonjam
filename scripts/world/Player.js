@@ -304,7 +304,7 @@ class Player extends wrk.GameEngine.DrawableEntity {
                 case 'bottom':
                     var overlap = this.bottomRightPos.y - wall.topLeftPos.y;
                     this.localPosition.y -= overlap;
-                    this.velocity.y = 5;
+                    this.velocity.y = 0;
                     break;
             }
         }

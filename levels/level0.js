@@ -93,14 +93,14 @@ const level0 = {
         // third instruction
         {
             type : 'label',
-            position : wrk.v(1200, -150),
+            position : wrk.v(1200, -180),
             direction : 'up',
             text : 'Reach the big portal to finish the level'
         },
         // end of level
         {
             type : 'levelEnd',
-            position : wrk.v(1200, -50),
+            position : wrk.v(1200, -75),
             direction : 'up'
         },
         // floor
