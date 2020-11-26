@@ -16,9 +16,8 @@ class Portal extends EnvironmentItem {
         this.setColliderSize(this.size);
         this.setTextureSize(this.size);
 
-        var diameter = wrk.min(this.textureSize.x, this.textureSize.y);
         this.center = new wrk.GameEngine.DrawableEntity('portal center',
-            wrk.v(0, 0), 0, Portal.centerTexture, wrk.v(diameter, diameter));
+            wrk.v(0, 0), 0, Portal.centerTexture, this.textureSize);
         this.addChild(this.center);
 
         this.lastUsed = -Infinity;

@@ -39,8 +39,8 @@ const level1 = {
         },
         {
             type : 'rockWall',
-            position : wrk.v(1725, 25),
-            size : wrk.v(150, 50),
+            position : wrk.v(1675, 25),
+            size : wrk.v(50, 50),
             direction : 'up'
         },
         {
@@ -51,19 +51,19 @@ const level1 = {
         },
         {
             type : 'rockWall',
-            position : wrk.v(1950, -25),
+            position : wrk.v(1850, -25),
             size : wrk.v(300, 50),
             direction : 'up'
         },
         {
             type : 'rockWall',
-            position : wrk.v(2200, -25),
+            position : wrk.v(2100, -25),
             size : wrk.v(200, 50),
             direction : 'up'
         },
         {
             type : 'rockWall',
-            position : wrk.v(2450, -75),
+            position : wrk.v(2350, -75),
             size : wrk.v(300, 50),
             direction : 'up'
         },
@@ -81,25 +81,7 @@ const level1 = {
         },
         {
             type : 'wall',
-            position : wrk.v(425, -50),
-            size : wrk.v(100, 50),
-            direction : 'right'
-        },
-        {
-            type : 'wall',
-            position : wrk.v(425, -50),
-            size : wrk.v(100, 50),
-            direction : 'right'
-        },
-        {
-            type : 'wall',
             position : wrk.v(325, -50),
-            size : wrk.v(100, 50),
-            direction : 'right'
-        },
-        {
-            type : 'wall',
-            position : wrk.v(475, -50),
             size : wrk.v(100, 50),
             direction : 'right'
         },
@@ -111,98 +93,91 @@ const level1 = {
         },
         {
             type : 'wall',
-            position : wrk.v(675, -100),
+            position : wrk.v(575, -100),
             size : wrk.v(200, 50),
             direction : 'right'
         },
         {
             type : 'wall',
-            position : wrk.v(850, -175),
+            position : wrk.v(750, -175),
             size : wrk.v(300, 50),
             direction : 'up'
         },
-        // Thing telling you to restart
-        {
-            type : 'label',
-            position : wrk.v(1070, -110),
-            direction : 'up',
-            text : 'If you get stuck, restart by clicking the pause button\nthen the restart button'
-        },
         {
             type : 'wall',
-            position : wrk.v(1225, -175),
+            position : wrk.v(1125, -175),
             size : wrk.v(150, 50),
             direction : 'up'
         },
         {
             type : 'wall',
-            position : wrk.v(1350, -125),
+            position : wrk.v(1250, -125),
             size : wrk.v(100, 50),
             direction : 'up'
         },
         {
             type : 'wall',
-            position : wrk.v(1450, -75),
+            position : wrk.v(1350, -75),
             size : wrk.v(100, 50),
             direction : 'up'
         },
         {
             type : 'wall',
-            position : wrk.v(1550, -25),
+            position : wrk.v(1450, -25),
             size : wrk.v(100, 50),
             direction : 'up'
         },
         {
             type : 'wall',
-            position : wrk.v(1925, -75),
+            position : wrk.v(1825, -75),
             size : wrk.v(50, 50),
             direction : 'up'
         },
         {
             type : 'wall',
-            position : wrk.v(2125, -75),
+            position : wrk.v(2025, -75),
             size : wrk.v(50, 50),
             direction : 'up'
         },
         {
             type : 'wall',
-            position : wrk.v(1925, -125),
+            position : wrk.v(1825, -125),
             size : wrk.v(50, 50),
             direction : 'up'
         },
         {
             type : 'wall',
-            position : wrk.v(2125, -125),
+            position : wrk.v(2025, -125),
             size : wrk.v(50, 50),
             direction : 'up'
         },
         {
             type : 'wall',
-            position : wrk.v(1975, -75),
+            position : wrk.v(1875, -75),
             size : wrk.v(50, 50),
             direction : 'up'
         },
         {
             type : 'wall',
-            position : wrk.v(2175, -75),
+            position : wrk.v(2075, -75),
             size : wrk.v(50, 50),
             direction : 'up'
         },
         {
             type : 'wall',
-            position : wrk.v(1975, -125),
+            position : wrk.v(1875, -125),
             size : wrk.v(50, 50),
             direction : 'up'
         },
         {
             type : 'wall',
-            position : wrk.v(2175, -125),
+            position : wrk.v(2075, -125),
             size : wrk.v(50, 50),
             direction : 'up'
         },
         {
             type : 'levelEnd',
-            position : wrk.v(2462, -175),
+            position : wrk.v(2362, -175),
             direction : 'up'
         },
 

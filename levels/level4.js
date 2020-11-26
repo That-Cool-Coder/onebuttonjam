@@ -236,7 +236,7 @@ const level4 = {
             type : 'portal',
             position : wrk.v(475, -300),
             direction : 'up',
-            color : "0xffff00"
+            color : "0x22dd22"
         },
         {
             type : 'portal',
@@ -250,11 +250,18 @@ const level4 = {
             direction : 'up',
             color : "0xff0000"
         },
+        // Instruction explaining portal
+        {
+            type : 'label',
+            position : wrk.v(400, -150),
+            direction : 'up',
+            text : 'This is a portal.\nIt teleports you to the\nother portal with the same color'
+        },
         {
             type : 'portal',
             position : wrk.v(475, -50),
             direction : 'up',
-            color : "0xffff00"
+            color : "0x22dd22"
         },
         {
             type : 'wall',
