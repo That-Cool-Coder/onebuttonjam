@@ -238,14 +238,14 @@ const level5 = {
         },
         {
             type : 'wall',
-            position : wrk.v(-1025, -712),
-            size : wrk.v(75, 50),
+            position : wrk.v(-1025, -725),
+            size : wrk.v(100, 50),
             direction : 'right'
         },
         {
             type : 'wall',
-            position : wrk.v(-1025, -862),
-            size : wrk.v(225, 50),
+            position : wrk.v(-1025, -875),
+            size : wrk.v(200, 50),
             direction : 'right'
         },
         {
