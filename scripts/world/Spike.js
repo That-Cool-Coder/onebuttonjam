@@ -9,7 +9,7 @@ class Spike extends EnvironmentItem {
         }
 
         super('spike', 'spike', localPosition, localDirection, wrk.v(0, 0),
-        wrk.GameEngine.Texture.fromUrl('assets/spike.png'), wrk.v(0, 0), false);
+            Spike.texture, wrk.v(0, 0), false);
         
         this.setColliderSize(this.size);
         this.setTextureSize(this.size);
