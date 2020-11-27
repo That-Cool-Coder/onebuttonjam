@@ -28,8 +28,13 @@ class Player extends wrk.GameEngine.DrawableEntity {
     };
 
     sounds = {
-        //die : new wrk.Sound('assets/player/die.mp3'),
+        die : new wrk.Sound('assets/player/die.mp3'),
+        hitPlatform : new wrk.Sound('assets/player/hitPlatform.mp3')
     };
+
+    // If the speed is above this and it touches the top of a platform,
+    // then make the hitPlatform sound
+    hitPlatformSoundMinSpeed = 100;
 
     constructor(name, localPosition, localAngle, controllerDial, environment) {
 
@@ -302,7 +307,10 @@ class Player extends wrk.GameEngine.DrawableEntity {
                     break;
 
                 case 'bottom':
-                    var overlap = this.bottomRightPos.y - wall.topLeftPos.y;
+                    if (this.velocity.y > this.hitPlatformSoundMinSpeed) {
+                        this.sounds.hitPlatform.play();
+                    }
+                    var overlap = this.bottomRightPos.y - wall.topLeftPos.y
                     this.localPosition.y -= overlap;
                     this.velocity.y = 0;
                     break;
@@ -330,6 +338,7 @@ class Player extends wrk.GameEngine.DrawableEntity {
             }
 
             this.setAlive(false);
+            this.sounds.die.play();
             setTimeout(() => {
                 playScreen.restartLevel();
             }, 1000);

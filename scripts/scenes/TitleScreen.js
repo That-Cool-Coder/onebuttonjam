@@ -4,6 +4,7 @@ class TitleScreen extends wrk.GameEngine.Scene {
 
         this.createBackground();
         this.createPlayButton();
+        this.createCredits();
     }
     
     createBackground() {
@@ -25,5 +26,14 @@ class TitleScreen extends wrk.GameEngine.Scene {
         });
 
         this.addChild(playButton);
+    }
+    
+    createCredits() {
+        var format = wrk.obj.oneLevelCopy(config.headingTextFormat);
+        format.fontSize = 20;
+        var credits = new wrk.GameEngine.Label('credits', config.creditsText,
+            wrk.v.copySub(wrk.GameEngine.canvasSize, wrk.v(200, 30)), wrk.PI,
+            format);
+        this.addChild(credits);
     }
 }
