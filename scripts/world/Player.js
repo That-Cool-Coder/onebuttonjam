@@ -347,6 +347,7 @@ class Player extends wrk.GameEngine.DrawableEntity {
 
     interactWithLevelEnd(levelEnd) {
         if (this.isTouching(levelEnd)) {
+            levelEnd.onCollidePlayer();
             this.finishLevel();
         }
     }

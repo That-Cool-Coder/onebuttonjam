@@ -159,24 +159,6 @@ const level6 = {
         },
         {
             type : 'rockWall',
-            position : wrk.v(350, -558),
-            size : wrk.v(300, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(325, -608),
-            size : wrk.v(250, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(300, -658),
-            size : wrk.v(200, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
             position : wrk.v(925, -2375),
             size : wrk.v(250, 50),
             direction : 'up'
@@ -234,24 +216,6 @@ const level6 = {
             position : wrk.v(2875, -1950),
             size : wrk.v(300, 50),
             direction : 'right'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(275, -708),
-            size : wrk.v(150, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(250, -758),
-            size : wrk.v(100, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(225, -808),
-            size : wrk.v(50, 50),
-            direction : 'up'
         },
         {
             type : 'portal',
@@ -335,11 +299,6 @@ const level6 = {
             type : 'wall',
             position : wrk.v(1150, -125),
             size : wrk.v(300, 50),
-            direction : 'up'
-        },
-        {
-            type : 'spike',
-            position : wrk.v(512, -645),
             direction : 'up'
         },
         {
@@ -638,12 +597,6 @@ const level6 = {
         },
         {
             type : 'wall',
-            position : wrk.v(0, -558),
-            size : wrk.v(300, 50),
-            direction : 'up'
-        },
-        {
-            type : 'wall',
             position : wrk.v(1350, 375),
             size : wrk.v(300, 50),
             direction : 'up'
@@ -668,39 +621,9 @@ const level6 = {
         },
         {
             type : 'wall',
-            position : wrk.v(-25, -608),
-            size : wrk.v(250, 50),
-            direction : 'up'
-        },
-        {
-            type : 'wall',
-            position : wrk.v(-50, -658),
-            size : wrk.v(200, 50),
-            direction : 'up'
-        },
-        {
-            type : 'wall',
-            position : wrk.v(-75, -708),
-            size : wrk.v(150, 50),
-            direction : 'up'
-        },
-        {
-            type : 'wall',
-            position : wrk.v(-100, -758),
-            size : wrk.v(100, 50),
-            direction : 'up'
-        },
-        {
-            type : 'wall',
             position : wrk.v(500, -50),
             size : wrk.v(100, 50),
             direction : 'right'
-        },
-        {
-            type : 'wall',
-            position : wrk.v(-125, -808),
-            size : wrk.v(50, 50),
-            direction : 'up'
         },
         {
             type : 'wall',

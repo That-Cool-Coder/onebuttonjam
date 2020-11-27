@@ -2,6 +2,10 @@ class Portal extends EnvironmentItem {
 
     cooldownTime = 1000;
     size = wrk.v(50, 100);
+
+    sounds = {
+        teleport : new wrk.Sound('assets/world/portal/teleport.mp3')
+    }
     
     constructor(localPosition, direction, color) {
 
@@ -71,6 +75,7 @@ class Portal extends EnvironmentItem {
             player.setGlobalPosition(this.outputPortal.globalPosition);
             this.startCooldownTimer();
             this.outputPortal.startCooldownTimer();
+            this.sounds.teleport.play();
         }
     }
 }

@@ -246,13 +246,6 @@ const level3 = {
             size : wrk.v(50, 50),
             direction : 'up'
         },
-        // Thing warning you about spikes
-        {
-            type : 'label',
-            position : wrk.v(688, -400),
-            direction : 'up',
-            text : 'Don\'t touch the spikes!'
-        },
         {
             type : 'spike',
             position : wrk.v(712, -312),
@@ -323,6 +316,12 @@ const level3 = {
             position : wrk.v(2162, -13),
             direction : 'up'
         },
-
+        // Thing warning you about spikes
+        {
+            type : 'label',
+            position : wrk.v(688, -400),
+            direction : 'up',
+            text : 'Don\'t touch the spikes!'
+        }
     ]
 }

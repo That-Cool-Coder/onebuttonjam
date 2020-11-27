@@ -8,42 +8,6 @@ const level8 = {
     playerStartPosition : wrk.v(0, -30),
     environmentItems : [
         {
-            type : 'rockWall',
-            position : wrk.v(950, -525),
-            size : wrk.v(300, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(925, -575),
-            size : wrk.v(250, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(900, -625),
-            size : wrk.v(200, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(875, -675),
-            size : wrk.v(150, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(850, -725),
-            size : wrk.v(100, 50),
-            direction : 'up'
-        },
-        {
-            type : 'rockWall',
-            position : wrk.v(825, -775),
-            size : wrk.v(50, 50),
-            direction : 'up'
-        },
-        {
             type : 'wall',
             position : wrk.v(-100, 25),
             size : wrk.v(200, 50),
@@ -405,11 +369,6 @@ const level8 = {
         },
         {
             type : 'spike',
-            position : wrk.v(1112, -612),
-            direction : 'up'
-        },
-        {
-            type : 'spike',
             position : wrk.v(-62, 638),
             direction : 'up'
         },
@@ -734,18 +693,6 @@ const level8 = {
         },
         {
             type : 'wall',
-            position : wrk.v(575, -575),
-            size : wrk.v(250, 50),
-            direction : 'up'
-        },
-        {
-            type : 'wall',
-            position : wrk.v(550, -625),
-            size : wrk.v(200, 50),
-            direction : 'up'
-        },
-        {
-            type : 'wall',
             position : wrk.v(-100, 500),
             size : wrk.v(300, 50),
             direction : 'right'
@@ -886,24 +833,6 @@ const level8 = {
             type : 'wall',
             position : wrk.v(4000, 675),
             size : wrk.v(250, 50),
-            direction : 'up'
-        },
-        {
-            type : 'wall',
-            position : wrk.v(525, -675),
-            size : wrk.v(150, 50),
-            direction : 'up'
-        },
-        {
-            type : 'wall',
-            position : wrk.v(500, -725),
-            size : wrk.v(100, 50),
-            direction : 'up'
-        },
-        {
-            type : 'wall',
-            position : wrk.v(475, -775),
-            size : wrk.v(50, 50),
             direction : 'up'
         },
         {

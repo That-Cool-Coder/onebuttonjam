@@ -180,6 +180,12 @@ const level1 = {
             position : wrk.v(2362, -175),
             direction : 'up'
         },
-
+        // Thing telling you to restart
+        {
+            type : 'label',
+            position : wrk.v(940, -110),
+            direction : 'up',
+            text : 'If you get stuck, restart by clicking the pause button\nthen the restart button'
+        },
     ]
 }

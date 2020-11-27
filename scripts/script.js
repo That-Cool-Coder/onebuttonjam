@@ -25,7 +25,10 @@ setInterval(() => {
     if (document.hidden && wrk.GameEngine.crntScene == playScreen) {
         wrk.GameEngine.selectScene(pauseMenu);
     }
-}, 10)
+}, 10);
+
+var themeSong = new wrk.Sound('assets/theme.wav');
+// themeSong.loop(); don't loop because you can't play audio before user interaction - fixme
 
 function testLevel(level) {
     playScreen.startLevel(level);

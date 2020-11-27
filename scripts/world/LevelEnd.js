@@ -3,6 +3,10 @@ class LevelEnd extends EnvironmentItem {
 
     size = wrk.v(75, 150);
 
+    sounds = {
+        teleport : new wrk.Sound('assets/world/levelEnd/teleport.mp3')
+    }
+
     constructor(localPosition, localDirection) {
         if (LevelEnd.texture == undefined) {
             LevelEnd.loadTexture();
@@ -18,5 +22,9 @@ class LevelEnd extends EnvironmentItem {
 
     static loadTexture() {
         LevelEnd.texture = wrk.GameEngine.Texture.fromUrl('assets/world/levelEnd/levelEnd.png');
+    }
+
+    onCollidePlayer() {
+        this.sounds.teleport.play();
     }
 }
