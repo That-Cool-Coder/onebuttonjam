@@ -591,13 +591,13 @@ const level8 = {
         },
         {
             type : 'portal',
-            position : wrk.v(3200, 400),
+            position : wrk.v(4000, 400),
             direction : 'up',
-            color : "0x000000"
+            color : "0x80ff00"
         },
         {
             type : 'portal',
-            position : wrk.v(4000, 400),
+            position : wrk.v(3200, 400),
             direction : 'up',
             color : "0x000000"
         },

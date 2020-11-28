@@ -37,10 +37,35 @@ class World extends wrk.GameEngine.Entity {
     // Levels
     // ------
 
+    playFinishScreen(levelData) {
+        this.loadLevel(levelData);
+
+        this.randomlyMovingPlayerHolder = new wrk.GameEngine.Entity(
+            'randomly moving player holder', wrk.v(0, 0), wrk.PI);
+        this.addChild(this.randomlyMovingPlayerHolder);
+
+        this.environment.fallOffHeight = Infinity;
+
+        wrk.doNTimes(levelData.randomBlobs, () => {
+            var posX = wrk.randint(levelData.blobSpawnMinX, levelData.blobSpawnMaxX);
+            var pos = wrk.v(posX, levelData.blobSpawnHeight);
+            var player = new RandomlyMovingPlayer('randomly moving player', pos, wrk.PI,
+                this.environment);
+            this.randomlyMovingPlayerHolder.addChild(player);
+            this.addChild(player);
+        })
+
+        this.update = () => this.finishScreenUpdate();
+    }
+
     loadLevel(levelData) {
         this.movePlayerTo(levelData.playerStartPosition);
         this.player.reset();
         this.crntLevel = levelData;
+
+        if (this.randomlyMovingPlayerHolder != undefined) {
+            this.removeChild(this.randomlyMovingPlayerHolder);
+        }
 
         if (levelData.backgroundType == 'image') {
             this.background.setTexture(levelData.backgroundTexture);
@@ -54,10 +79,12 @@ class World extends wrk.GameEngine.Entity {
         this.environment.removeChildren();
         var portals = [];
         levelData.environmentItems.forEach(item => {
-            var loadedItem = this.loadItem(item)
-            this.environment.addChild(loadedItem);
-            if (loadedItem.type == 'portal') {
-                portals.push(loadedItem);
+            var loadedItem = this.loadItem(item);
+            if (item != undefined) {
+                this.environment.addChild(loadedItem);
+                if (loadedItem.type == 'portal') {
+                    portals.push(loadedItem);
+                }
             }
         });
 
@@ -68,6 +95,8 @@ class World extends wrk.GameEngine.Entity {
         // Move player to front
         this.removeChild(this.player);
         this.addChild(this.player);
+
+        this.update = () => this.normalUpdate();
     }
 
     loadItem(item) {
@@ -77,6 +106,9 @@ class World extends wrk.GameEngine.Entity {
                 return item;
             case 'rockWall':
                 var item = new RockWall(item.position, item.direction, item.size);
+                return item;
+            case 'grassWall':
+                var item = new GrassWall(item.position, item.direction, item.size);
                 return item;
             case 'spike':
                 var item = new Spike(item.position, item.direction);
@@ -126,7 +158,15 @@ class World extends wrk.GameEngine.Entity {
         this.setLocalPosition(position);
     }
 
-    update() {
+    normalUpdate() {
+        this.cameraMovement();
+
+        // Stop the background from moving
+        this.background.setGlobalPosition(wrk.GameEngine.canvasSize);
+    }
+
+    finishScreenUpdate() {
+
         this.cameraMovement();
 
         // Stop the background from moving

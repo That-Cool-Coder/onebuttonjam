@@ -1,0 +1,11 @@
+// Like json but loaded as js
+
+const finishScreen = {
+    number : 'finishScreen',
+    fallOffHeight : 6000,
+    randomBlobs : 10,
+    blobSpawnHeight : -200,
+    blobSpawnMinX : -500,
+    blobSpawnMaxX : 500,
+    backgroundType : 'image',
+    backgroundTexture : wrk.GameEngine.Texture.fromUrl('assets/world/sunnyBackground.png'),

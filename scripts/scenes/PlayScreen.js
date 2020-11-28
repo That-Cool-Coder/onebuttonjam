@@ -11,13 +11,11 @@ class PlayScreen extends wrk.GameEngine.Scene {
     }
 
     startLevel(level) {
-
-        // Remove and replace hud to make it be on top of the world
-        this.removeChild(this.hud);
-    
         this.crntLevel = level;
         this.world.loadLevel(level);
 
+        // Remove and replace hud to make it be on top of the world
+        this.removeChild(this.hud);
         this.addChild(this.hud);
     }
 
@@ -25,6 +23,15 @@ class PlayScreen extends wrk.GameEngine.Scene {
         fadeIntoBlack().then(() => {
             this.startLevel(this.crntLevel);
             fadeOutOfBlack();
-        })
+        });
+    }
+
+    showFinishScreen() {
+        var level = finishScreen;
+        this.world.playFinishScreen(level);
+
+        // Remove and replace hud to make it be on top of the world
+        this.removeChild(this.hud);
+        this.addChild(this.hud);
     }
 }

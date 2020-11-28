@@ -11,6 +11,7 @@ class Player extends wrk.GameEngine.DrawableEntity {
     worldComponentInteractions = {
         'wall' : obj => this.interactWithWall(obj),
         'rockWall' : obj => this.interactWithWall(obj),
+        'grassWall' : obj => this.interactWithWall(obj),
         'portal' : obj => this.interactWithPortal(obj),
         'spike' : obj => this.interactWithSpike(obj),
         'levelEnd' : obj => this.interactWithLevelEnd(obj),
@@ -65,8 +66,19 @@ class Player extends wrk.GameEngine.DrawableEntity {
 
     finishLevel() {
         this.setFrozen(true);
-        unlockNextLevel();
-        fadeToScene(levelSelectScreen);
+
+        var isLastLevel = playScreen.crntLevel.number == levels.length - 1;
+        var isFinishScreen = playScreen.crntLevel.number == 'finishScreen';
+        if (isLastLevel) {
+            playScreen.showFinishScreen();
+        }
+        else if (isFinishScreen) {
+            fadeToScene(levelSelectScreen);
+        }
+        else {
+            unlockNextLevel();
+            fadeToScene(levelSelectScreen);
+        }
     }
 
     get topLeftPos() {
@@ -289,18 +301,27 @@ class Player extends wrk.GameEngine.DrawableEntity {
 
             switch (collisionSide) {
                 case 'left':
+                    if (this.velocity.x < -this.hitPlatformSoundMinSpeed) {
+                        this.sounds.hitPlatform.play();
+                    }
                     var overlap = wall.bottomRightPos.x - this.topLeftPos.x;
                     this.localPosition.x += overlap;
                     this.velocity.x = 0;
                     break;
 
                 case 'right':
+                    if (this.velocity.x > this.hitPlatformSoundMinSpeed) {
+                        this.sounds.hitPlatform.play();
+                    }
                     var overlap = this.bottomRightPos.x - wall.topLeftPos.x;
                     this.localPosition.x -= overlap;
                     this.velocity.x = 0;
                     break;
 
                 case 'top':
+                    if (this.velocity.y < -this.hitPlatformSoundMinSpeed) {
+                        this.sounds.hitPlatform.play();
+                    }
                     var overlap = wall.bottomRightPos.y - this.topLeftPos.y;
                     this.localPosition.y += overlap + 2;
                     this.velocity.y = 5;

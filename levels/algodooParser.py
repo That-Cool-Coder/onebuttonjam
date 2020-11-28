@@ -4,6 +4,7 @@ from math import pi
 
 ROCK_WALL_COLOR = [270, 1, 0.6, 1]
 WALL_COLOR = [0, 0, 0.6, 1]
+GRASS_WALL_COLOR = [120, 1, 0.5, 1]
 START_POS_COLOR = [221.38263, 0.71006507, 0.98478514, 1]
 LEVEL_END_COLOR = [240, 1, 0.83333331, 1.0000000]
 SPIKE_COLOR = [0, 1, 1, 1]
@@ -64,6 +65,8 @@ def loadItem(item):
         return loadRockWall(itemDict)
     elif colorsMatch(itemDict['colorHSVA'], WALL_COLOR):
         return loadWall(itemDict)
+    elif colorsMatch(itemDict['colorHSVA'], GRASS_WALL_COLOR):
+        return loadGrassWall(itemDict)
     elif colorsMatch(itemDict['colorHSVA'], START_POS_COLOR):
         return loadStartPos(itemDict)
     elif colorsMatch(itemDict['colorHSVA'], LEVEL_END_COLOR):
@@ -175,6 +178,18 @@ def loadWall(itemDict):
     result = \
 f'''        {{
             type : 'wall',
+            position : wrk.v({position[0]}, {position[1]}),
+            size : wrk.v({realSize[0]}, {realSize[1]}),
+            direction : {direction}
+        }}'''
+    return result
+
+def loadGrassWall(itemDict):
+    position = loadPosition(itemDict)
+    direction, realSize = loadDirectionAndRealSize(itemDict, True)
+    result = \
+f'''        {{
+            type : 'grassWall',
             position : wrk.v({position[0]}, {position[1]}),
             size : wrk.v({realSize[0]}, {realSize[1]}),
             direction : {direction}

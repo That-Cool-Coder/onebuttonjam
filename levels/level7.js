@@ -2,7 +2,7 @@
 
 const level7 = {
     number : 7,
-    fallOffHeight : 30000,
+    fallOffHeight : 10000,
     backgroundType : 'image',
     backgroundTexture : wrk.GameEngine.Texture.fromUrl('assets/world/background2.png'),
     playerStartPosition : wrk.v(0, 0),

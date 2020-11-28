@@ -171,10 +171,10 @@ Tools.DragTool -> {
     solveD = 4.0000000
 };
 Scene.Camera -> {
-    pan = [13.653193, 4.7819428];
+    pan = [40.026081, -3.4288559];
     rotation = 0.00000000;
     trackRotation = false;
-    zoom = 15.401266
+    zoom = 220.55247
 };
 App.Background -> {
     cloudOpacity = 0.60000002;
@@ -201,11 +201,11 @@ Scene.addPlane {
     timeToLive := +inf;
     update := (e)=>{};
     angle := 0.00000000;
-    geomID := 722;
+    geomID := 202;
     friction := 0.50000000;
     materialName := "";
     restitution := 0.50000000;
-    entityID := 728;
+    entityID := 211;
     zDepth := 0.00000000;
     onSpawn := (e)=>{};
     resources := [];
@@ -262,7 +262,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 729;
+    entityID := 212;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -286,8 +286,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 723;
-    body := 1378;
+    geomID := 203;
+    body := 351;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 1.0000000;
@@ -307,11 +307,11 @@ Scene.addPlane {
     timeToLive := +inf;
     update := (e)=>{};
     angle := 1.5707964;
-    geomID := 724;
+    geomID := 204;
     friction := 0.50000000;
     materialName := "";
     restitution := 0.50000000;
-    entityID := 730;
+    entityID := 213;
     zDepth := 2.0000000;
     onSpawn := (e)=>{};
     resources := [];
@@ -368,7 +368,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 731;
+    entityID := 214;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -392,8 +392,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 725;
-    body := 1381;
+    geomID := 205;
+    body := 354;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 3.0000000;
@@ -432,7 +432,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 732;
+    entityID := 215;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -456,8 +456,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 726;
-    body := 1383;
+    geomID := 206;
+    body := 356;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 4.0000000;
@@ -496,7 +496,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 733;
+    entityID := 216;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -520,8 +520,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 727;
-    body := 1385;
+    geomID := 207;
+    body := 358;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 5.0000000;
@@ -560,7 +560,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 734;
+    entityID := 217;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -584,8 +584,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 728;
-    body := 1387;
+    geomID := 208;
+    body := 360;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 6.0000000;
@@ -624,7 +624,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 735;
+    entityID := 218;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -648,8 +648,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 729;
-    body := 1389;
+    geomID := 209;
+    body := 362;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 7.0000000;
@@ -688,7 +688,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 736;
+    entityID := 219;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -712,8 +712,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 730;
-    body := 1391;
+    geomID := 210;
+    body := 364;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 8.0000000;
@@ -733,11 +733,11 @@ Scene.addPlane {
     timeToLive := +inf;
     update := (e)=>{};
     angle := 3.1415927;
-    geomID := 731;
+    geomID := 211;
     friction := 0.50000000;
     materialName := "";
     restitution := 0.50000000;
-    entityID := 737;
+    entityID := 220;
     zDepth := 9.0000000;
     onSpawn := (e)=>{};
     resources := [];
@@ -794,7 +794,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [1.5000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 738;
+    entityID := 221;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -818,8 +818,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 732;
-    body := 1394;
+    geomID := 212;
+    body := 367;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 10.000000;
@@ -858,7 +858,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [1.5000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 739;
+    entityID := 222;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -882,8 +882,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 733;
-    body := 1396;
+    geomID := 213;
+    body := 369;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 11.000000;
@@ -922,7 +922,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [1.5000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 740;
+    entityID := 223;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -946,8 +946,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 734;
-    body := 1398;
+    geomID := 214;
+    body := 371;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 12.000000;
@@ -986,7 +986,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [1.5000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 741;
+    entityID := 224;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -1010,8 +1010,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 735;
-    body := 1400;
+    geomID := 215;
+    body := 373;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 13.000000;
@@ -1050,7 +1050,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [1.5000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 742;
+    entityID := 225;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -1074,8 +1074,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 736;
-    body := 1402;
+    geomID := 216;
+    body := 375;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 14.000000;
@@ -1114,7 +1114,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [1.5000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 743;
+    entityID := 226;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -1138,8 +1138,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 737;
-    body := 1404;
+    geomID := 217;
+    body := 377;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 15.000000;
@@ -1159,11 +1159,11 @@ Scene.addPlane {
     timeToLive := +inf;
     update := (e)=>{};
     angle := -1.5707964;
-    geomID := 738;
+    geomID := 218;
     friction := 0.50000000;
     materialName := "";
     restitution := 0.50000000;
-    entityID := 744;
+    entityID := 227;
     zDepth := 16.000000;
     onSpawn := (e)=>{};
     resources := [];
@@ -1220,7 +1220,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 745;
+    entityID := 228;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -1244,8 +1244,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 739;
-    body := 1407;
+    geomID := 219;
+    body := 380;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 17.000000;
@@ -1284,7 +1284,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 746;
+    entityID := 229;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -1308,8 +1308,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 740;
-    body := 1409;
+    geomID := 220;
+    body := 382;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 18.000000;
@@ -1348,7 +1348,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 747;
+    entityID := 230;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -1372,8 +1372,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 741;
-    body := 1411;
+    geomID := 221;
+    body := 384;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 19.000000;
@@ -1412,7 +1412,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 748;
+    entityID := 231;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -1436,8 +1436,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 742;
-    body := 1413;
+    geomID := 222;
+    body := 386;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 20.000000;
@@ -1476,7 +1476,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 749;
+    entityID := 232;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -1500,8 +1500,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 743;
-    body := 1415;
+    geomID := 223;
+    body := 388;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 21.000000;
@@ -1540,7 +1540,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 750;
+    entityID := 233;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -1564,8 +1564,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 744;
-    body := 1417;
+    geomID := 224;
+    body := 390;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 22.000000;
@@ -1604,7 +1604,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000012, 1.2500000];
     friction := 0.50000000;
-    entityID := 751;
+    entityID := 234;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -1628,8 +1628,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 745;
-    body := 1419;
+    geomID := 225;
+    body := 392;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 23.000000;
@@ -1668,7 +1668,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000012, 1.2500000];
     friction := 0.50000000;
-    entityID := 752;
+    entityID := 235;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -1692,8 +1692,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 746;
-    body := 1421;
+    geomID := 226;
+    body := 394;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 24.000000;
@@ -1732,7 +1732,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000012, 1.2500000];
     friction := 0.50000000;
-    entityID := 753;
+    entityID := 236;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -1756,8 +1756,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 747;
-    body := 1423;
+    geomID := 227;
+    body := 396;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 25.000000;
@@ -1796,7 +1796,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000012, 1.2500000];
     friction := 0.50000000;
-    entityID := 754;
+    entityID := 237;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -1820,8 +1820,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 748;
-    body := 1425;
+    geomID := 228;
+    body := 398;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 26.000000;
@@ -1860,7 +1860,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000012, 1.2500000];
     friction := 0.50000000;
-    entityID := 755;
+    entityID := 238;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -1884,8 +1884,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 749;
-    body := 1427;
+    geomID := 229;
+    body := 400;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 27.000000;
@@ -1924,7 +1924,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000012, 1.2500000];
     friction := 0.50000000;
-    entityID := 756;
+    entityID := 239;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -1948,8 +1948,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 750;
-    body := 1429;
+    geomID := 230;
+    body := 402;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 28.000000;
@@ -1988,7 +1988,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000012, 1.2500000];
     friction := 0.50000000;
-    entityID := 757;
+    entityID := 240;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2012,8 +2012,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 751;
-    body := 1431;
+    geomID := 231;
+    body := 404;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 29.000000;
@@ -2052,7 +2052,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000012, 1.2500000];
     friction := 0.50000000;
-    entityID := 758;
+    entityID := 241;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2076,8 +2076,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 752;
-    body := 1433;
+    geomID := 232;
+    body := 406;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 30.000000;
@@ -2116,7 +2116,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000012, 1.2500000];
     friction := 0.50000000;
-    entityID := 759;
+    entityID := 242;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2140,8 +2140,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 753;
-    body := 1435;
+    geomID := 233;
+    body := 408;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 31.000000;
@@ -2180,7 +2180,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000012, 1.2500000];
     friction := 0.50000000;
-    entityID := 760;
+    entityID := 243;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2204,8 +2204,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 754;
-    body := 1437;
+    geomID := 234;
+    body := 410;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 32.000000;
@@ -2244,7 +2244,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000012, 1.2500000];
     friction := 0.50000000;
-    entityID := 761;
+    entityID := 244;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2268,8 +2268,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 755;
-    body := 1439;
+    geomID := 235;
+    body := 412;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 33.000000;
@@ -2308,7 +2308,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000012, 1.2500000];
     friction := 0.50000000;
-    entityID := 762;
+    entityID := 245;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2332,8 +2332,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 756;
-    body := 1441;
+    geomID := 236;
+    body := 414;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 34.000000;
@@ -2372,7 +2372,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 763;
+    entityID := 246;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2396,8 +2396,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 757;
-    body := 1443;
+    geomID := 237;
+    body := 416;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 35.000000;
@@ -2436,7 +2436,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 764;
+    entityID := 247;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2460,8 +2460,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 758;
-    body := 1445;
+    geomID := 238;
+    body := 418;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 36.000000;
@@ -2500,7 +2500,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 765;
+    entityID := 248;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2524,8 +2524,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 759;
-    body := 1447;
+    geomID := 239;
+    body := 420;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 37.000000;
@@ -2564,7 +2564,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 766;
+    entityID := 249;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2588,8 +2588,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 760;
-    body := 1449;
+    geomID := 240;
+    body := 422;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 38.000000;
@@ -2628,7 +2628,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 767;
+    entityID := 250;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2652,8 +2652,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 761;
-    body := 1451;
+    geomID := 241;
+    body := 424;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 39.000000;
@@ -2692,7 +2692,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 768;
+    entityID := 251;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2716,8 +2716,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 762;
-    body := 1453;
+    geomID := 242;
+    body := 426;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 40.000000;
@@ -2756,7 +2756,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 769;
+    entityID := 252;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2780,8 +2780,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 763;
-    body := 1455;
+    geomID := 243;
+    body := 428;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 41.000000;
@@ -2820,7 +2820,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 770;
+    entityID := 253;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2844,8 +2844,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 764;
-    body := 1457;
+    geomID := 244;
+    body := 430;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 42.000000;
@@ -2884,7 +2884,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [1.5000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 771;
+    entityID := 254;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2908,8 +2908,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 765;
-    body := 1459;
+    geomID := 245;
+    body := 432;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 43.000000;
@@ -2948,7 +2948,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [1.5000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 772;
+    entityID := 255;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -2972,8 +2972,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 766;
-    body := 1461;
+    geomID := 246;
+    body := 434;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 44.000000;
@@ -3012,7 +3012,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [1.5000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 773;
+    entityID := 256;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3036,8 +3036,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 767;
-    body := 1463;
+    geomID := 247;
+    body := 436;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 45.000000;
@@ -3076,7 +3076,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [1.5000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 774;
+    entityID := 257;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3100,8 +3100,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 768;
-    body := 1465;
+    geomID := 248;
+    body := 438;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 46.000000;
@@ -3140,7 +3140,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [1.5000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 775;
+    entityID := 258;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3164,8 +3164,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 769;
-    body := 1467;
+    geomID := 249;
+    body := 440;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 47.000000;
@@ -3204,7 +3204,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [1.5000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 776;
+    entityID := 259;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3228,8 +3228,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 770;
-    body := 1469;
+    geomID := 250;
+    body := 442;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 48.000000;
@@ -3268,7 +3268,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 777;
+    entityID := 260;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3292,8 +3292,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 771;
-    body := 1471;
+    geomID := 251;
+    body := 444;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 49.000000;
@@ -3332,7 +3332,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.49999994, 1.7499996];
     friction := 0.50000000;
-    entityID := 778;
+    entityID := 261;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3356,8 +3356,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 772;
-    body := 1473;
+    geomID := 252;
+    body := 446;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 50.000000;
@@ -3396,7 +3396,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.49999994, 1.7499996];
     friction := 0.50000000;
-    entityID := 779;
+    entityID := 262;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3420,8 +3420,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 773;
-    body := 1475;
+    geomID := 253;
+    body := 448;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 51.000000;
@@ -3460,7 +3460,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.49999994, 1.7499996];
     friction := 0.50000000;
-    entityID := 780;
+    entityID := 263;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3484,8 +3484,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 774;
-    body := 1477;
+    geomID := 254;
+    body := 450;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 52.000000;
@@ -3524,7 +3524,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.49999994, 1.7499996];
     friction := 0.50000000;
-    entityID := 781;
+    entityID := 264;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3548,8 +3548,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 775;
-    body := 1479;
+    geomID := 255;
+    body := 452;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 53.000000;
@@ -3588,7 +3588,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.49999994, 1.7499996];
     friction := 0.50000000;
-    entityID := 782;
+    entityID := 265;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3612,8 +3612,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 776;
-    body := 1481;
+    geomID := 256;
+    body := 454;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 54.000000;
@@ -3652,7 +3652,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.49999994, 1.7499996];
     friction := 0.50000000;
-    entityID := 783;
+    entityID := 266;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3676,8 +3676,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 777;
-    body := 1483;
+    geomID := 257;
+    body := 456;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 55.000000;
@@ -3716,7 +3716,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.49999994, 1.7499996];
     friction := 0.50000000;
-    entityID := 784;
+    entityID := 267;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3740,8 +3740,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 778;
-    body := 1485;
+    geomID := 258;
+    body := 458;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 56.000000;
@@ -3780,7 +3780,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.49999994, 1.7499996];
     friction := 0.50000000;
-    entityID := 785;
+    entityID := 268;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3804,8 +3804,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 779;
-    body := 1487;
+    geomID := 259;
+    body := 460;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 57.000000;
@@ -3844,7 +3844,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.49999994, 1.7499996];
     friction := 0.50000000;
-    entityID := 786;
+    entityID := 269;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3868,8 +3868,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 780;
-    body := 1489;
+    geomID := 260;
+    body := 462;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 58.000000;
@@ -3908,7 +3908,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.49999994, 1.7499996];
     friction := 0.50000000;
-    entityID := 787;
+    entityID := 270;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3932,8 +3932,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 781;
-    body := 1491;
+    geomID := 261;
+    body := 464;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 59.000000;
@@ -3972,7 +3972,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.49999994, 1.7499996];
     friction := 0.50000000;
-    entityID := 788;
+    entityID := 271;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -3996,8 +3996,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 782;
-    body := 1493;
+    geomID := 262;
+    body := 466;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 60.000000;
@@ -4036,7 +4036,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.49999994, 1.7499996];
     friction := 0.50000000;
-    entityID := 789;
+    entityID := 272;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -4060,8 +4060,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 783;
-    body := 1495;
+    geomID := 263;
+    body := 468;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 61.000000;
@@ -4100,7 +4100,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.49999994, 1.7499996];
     friction := 0.50000000;
-    entityID := 790;
+    entityID := 273;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -4124,8 +4124,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 784;
-    body := 1497;
+    geomID := 264;
+    body := 470;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 62.000000;
@@ -4164,7 +4164,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.49999994, 1.7499996];
     friction := 0.50000000;
-    entityID := 791;
+    entityID := 274;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -4188,8 +4188,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 785;
-    body := 1499;
+    geomID := 265;
+    body := 472;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 63.000000;
@@ -4228,7 +4228,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.0000000, 0.50000000];
     friction := 0.50000000;
-    entityID := 792;
+    entityID := 275;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 0.00000000, 0.00000000, 1.0000000];
@@ -4252,8 +4252,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "Level 8";
     opaqueBorders := true;
-    geomID := 786;
-    body := 1501;
+    geomID := 266;
+    body := 474;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 64.000000;
@@ -4292,7 +4292,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.30000001, 0.60000002];
     friction := 0.50000000;
-    entityID := 793;
+    entityID := 276;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.28552362, 0.50249714, 0.98478514, 1.0000000];
@@ -4316,8 +4316,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 787;
-    body := 1503;
+    geomID := 267;
+    body := 476;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 65.000000;
@@ -4356,7 +4356,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 795;
+    entityID := 277;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -4380,8 +4380,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 789;
-    body := 1507;
+    geomID := 268;
+    body := 478;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 66.000000;
@@ -4420,7 +4420,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 796;
+    entityID := 278;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -4444,8 +4444,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 790;
-    body := 1509;
+    geomID := 269;
+    body := 480;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 67.000000;
@@ -4484,7 +4484,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 797;
+    entityID := 279;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -4508,8 +4508,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 791;
-    body := 1511;
+    geomID := 270;
+    body := 482;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 68.000000;
@@ -4548,7 +4548,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 798;
+    entityID := 280;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -4572,8 +4572,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 792;
-    body := 1513;
+    geomID := 271;
+    body := 484;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 69.000000;
@@ -4612,7 +4612,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 799;
+    entityID := 281;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -4636,8 +4636,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 793;
-    body := 1515;
+    geomID := 272;
+    body := 486;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 70.000000;
@@ -4676,7 +4676,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 800;
+    entityID := 282;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -4700,8 +4700,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 794;
-    body := 1517;
+    geomID := 273;
+    body := 488;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 71.000000;
@@ -4740,7 +4740,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 801;
+    entityID := 283;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -4764,8 +4764,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 795;
-    body := 1519;
+    geomID := 274;
+    body := 490;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 72.000000;
@@ -4804,7 +4804,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 802;
+    entityID := 284;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -4828,8 +4828,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 796;
-    body := 1521;
+    geomID := 275;
+    body := 492;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 73.000000;
@@ -4868,7 +4868,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 803;
+    entityID := 285;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -4892,8 +4892,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 797;
-    body := 1523;
+    geomID := 276;
+    body := 494;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 74.000000;
@@ -4932,7 +4932,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 804;
+    entityID := 286;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -4956,8 +4956,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 798;
-    body := 1525;
+    geomID := 277;
+    body := 496;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 75.000000;
@@ -4996,7 +4996,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 805;
+    entityID := 287;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5020,8 +5020,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 799;
-    body := 1527;
+    geomID := 278;
+    body := 498;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 76.000000;
@@ -5060,7 +5060,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 806;
+    entityID := 288;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5084,8 +5084,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 800;
-    body := 1529;
+    geomID := 279;
+    body := 500;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 77.000000;
@@ -5124,7 +5124,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 807;
+    entityID := 289;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5148,8 +5148,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 801;
-    body := 1531;
+    geomID := 280;
+    body := 502;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 78.000000;
@@ -5188,7 +5188,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 808;
+    entityID := 290;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5212,8 +5212,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 802;
-    body := 1533;
+    geomID := 281;
+    body := 504;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 79.000000;
@@ -5252,7 +5252,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 809;
+    entityID := 291;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5276,8 +5276,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 803;
-    body := 1535;
+    geomID := 282;
+    body := 506;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 80.000000;
@@ -5316,7 +5316,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 810;
+    entityID := 292;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5340,8 +5340,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 804;
-    body := 1537;
+    geomID := 283;
+    body := 508;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 81.000000;
@@ -5380,7 +5380,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 811;
+    entityID := 293;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5404,8 +5404,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 805;
-    body := 1539;
+    geomID := 284;
+    body := 510;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 82.000000;
@@ -5444,7 +5444,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 812;
+    entityID := 294;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5468,8 +5468,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 806;
-    body := 1541;
+    geomID := 285;
+    body := 512;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 83.000000;
@@ -5508,7 +5508,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 813;
+    entityID := 295;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5532,8 +5532,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 807;
-    body := 1543;
+    geomID := 286;
+    body := 514;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 84.000000;
@@ -5572,7 +5572,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 814;
+    entityID := 296;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5596,8 +5596,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 808;
-    body := 1545;
+    geomID := 287;
+    body := 516;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 85.000000;
@@ -5636,7 +5636,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 815;
+    entityID := 297;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5660,8 +5660,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 809;
-    body := 1547;
+    geomID := 288;
+    body := 518;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 86.000000;
@@ -5700,7 +5700,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 816;
+    entityID := 298;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5724,8 +5724,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 810;
-    body := 1549;
+    geomID := 289;
+    body := 520;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 87.000000;
@@ -5764,7 +5764,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 817;
+    entityID := 299;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5788,8 +5788,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 811;
-    body := 1551;
+    geomID := 290;
+    body := 522;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 88.000000;
@@ -5828,7 +5828,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 818;
+    entityID := 300;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5852,8 +5852,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 812;
-    body := 1553;
+    geomID := 291;
+    body := 524;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 89.000000;
@@ -5892,7 +5892,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 819;
+    entityID := 301;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5916,8 +5916,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 813;
-    body := 1555;
+    geomID := 292;
+    body := 526;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 90.000000;
@@ -5956,7 +5956,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 820;
+    entityID := 302;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -5980,8 +5980,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 814;
-    body := 1557;
+    geomID := 293;
+    body := 528;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 91.000000;
@@ -6020,7 +6020,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 821;
+    entityID := 303;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -6044,8 +6044,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 815;
-    body := 1559;
+    geomID := 294;
+    body := 530;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 92.000000;
@@ -6084,7 +6084,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 822;
+    entityID := 304;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -6108,8 +6108,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 816;
-    body := 1561;
+    geomID := 295;
+    body := 532;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 93.000000;
@@ -6148,7 +6148,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 823;
+    entityID := 305;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -6172,8 +6172,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 817;
-    body := 1563;
+    geomID := 296;
+    body := 534;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 94.000000;
@@ -6212,7 +6212,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 824;
+    entityID := 306;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -6236,8 +6236,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 818;
-    body := 1565;
+    geomID := 297;
+    body := 536;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 95.000000;
@@ -6276,7 +6276,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 825;
+    entityID := 307;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -6300,8 +6300,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 819;
-    body := 1567;
+    geomID := 298;
+    body := 538;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 96.000000;
@@ -6340,7 +6340,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 826;
+    entityID := 308;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -6364,8 +6364,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 820;
-    body := 1569;
+    geomID := 299;
+    body := 540;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 97.000000;
@@ -6404,7 +6404,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 827;
+    entityID := 309;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -6428,8 +6428,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 821;
-    body := 1571;
+    geomID := 300;
+    body := 542;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 98.000000;
@@ -6468,7 +6468,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 828;
+    entityID := 310;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -6492,8 +6492,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 822;
-    body := 1573;
+    geomID := 301;
+    body := 544;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 99.000000;
@@ -6532,7 +6532,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 829;
+    entityID := 311;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -6556,8 +6556,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 823;
-    body := 1575;
+    geomID := 302;
+    body := 546;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 100.00000;
@@ -6596,7 +6596,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.25000000, 0.25000000];
     friction := 0.50000000;
-    entityID := 830;
+    entityID := 312;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [1.0000000, 0.00000000, 0.00000000, 1.0000000];
@@ -6620,8 +6620,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 824;
-    body := 1577;
+    geomID := 303;
+    body := 548;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 101.00000;
@@ -6660,7 +6660,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 831;
+    entityID := 313;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -6684,8 +6684,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0x22dd22";
     opaqueBorders := true;
-    geomID := 825;
-    body := 1579;
+    geomID := 304;
+    body := 550;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 102.00000;
@@ -6724,7 +6724,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 832;
+    entityID := 314;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -6748,8 +6748,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0x00ffff";
     opaqueBorders := true;
-    geomID := 826;
-    body := 1581;
+    geomID := 305;
+    body := 552;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 103.00000;
@@ -6788,7 +6788,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 833;
+    entityID := 315;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -6812,8 +6812,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0x00ffff";
     opaqueBorders := true;
-    geomID := 827;
-    body := 1583;
+    geomID := 306;
+    body := 554;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 104.00000;
@@ -6852,7 +6852,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 834;
+    entityID := 316;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -6876,8 +6876,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0x00ff00";
     opaqueBorders := true;
-    geomID := 828;
-    body := 1585;
+    geomID := 307;
+    body := 556;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 105.00000;
@@ -6916,7 +6916,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 835;
+    entityID := 317;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -6940,8 +6940,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0x00ff00";
     opaqueBorders := true;
-    geomID := 829;
-    body := 1587;
+    geomID := 308;
+    body := 558;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 106.00000;
@@ -6980,7 +6980,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 836;
+    entityID := 318;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7004,8 +7004,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0x000000";
     opaqueBorders := true;
-    geomID := 830;
-    body := 1589;
+    geomID := 309;
+    body := 560;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 107.00000;
@@ -7044,7 +7044,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 837;
+    entityID := 319;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7068,8 +7068,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0x80ff00";
     opaqueBorders := true;
-    geomID := 831;
-    body := 1591;
+    geomID := 310;
+    body := 562;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 108.00000;
@@ -7102,13 +7102,13 @@ Scene.addBox {
     immortal := false;
     ruler := false;
     textColor := [1.0000000, 1.0000000, 1.0000000, 1.0000000];
-    area := 1.0000000;
+    area := 0.50000000;
     collideSet := 1;
     drawBorder := true;
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 838;
+    entityID := 362;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7118,7 +7118,7 @@ Scene.addBox {
     textFontSize := 32.000000;
     onHitByLaser := (e)=>{};
     textFont := "Verdana";
-    pos := [32.000000, -4.0000000];
+    pos := [40.000000, -3.9999998];
     onDie := (e)=>{};
     density := 2.0000000;
     airFrictionMult := 1.0000000;
@@ -7130,10 +7130,10 @@ Scene.addBox {
     onKey := (e)=>{};
     showVelocity := false;
     postStep := (e)=>{};
-    text := "0x000000";
+    text := "0x80ff00";
     opaqueBorders := true;
-    geomID := 832;
-    body := 1593;
+    geomID := 353;
+    body := 648;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 109.00000;
@@ -7172,7 +7172,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 839;
+    entityID := 320;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7182,7 +7182,7 @@ Scene.addBox {
     textFontSize := 32.000000;
     onHitByLaser := (e)=>{};
     textFont := "Verdana";
-    pos := [40.000000, -4.0000000];
+    pos := [32.000000, -4.0000000];
     onDie := (e)=>{};
     density := 2.0000000;
     airFrictionMult := 1.0000000;
@@ -7196,8 +7196,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0x000000";
     opaqueBorders := true;
-    geomID := 833;
-    body := 1595;
+    geomID := 311;
+    body := 564;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 110.00000;
@@ -7236,7 +7236,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 840;
+    entityID := 322;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7260,8 +7260,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0x22dd22";
     opaqueBorders := true;
-    geomID := 834;
-    body := 1597;
+    geomID := 313;
+    body := 568;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 111.00000;
@@ -7300,7 +7300,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 841;
+    entityID := 323;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7324,8 +7324,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0x2222dd";
     opaqueBorders := true;
-    geomID := 835;
-    body := 1599;
+    geomID := 314;
+    body := 570;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 112.00000;
@@ -7364,7 +7364,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 842;
+    entityID := 324;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7388,8 +7388,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0xffaa00";
     opaqueBorders := true;
-    geomID := 836;
-    body := 1601;
+    geomID := 315;
+    body := 572;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 113.00000;
@@ -7428,7 +7428,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 843;
+    entityID := 325;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7452,8 +7452,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0xffffff";
     opaqueBorders := true;
-    geomID := 837;
-    body := 1603;
+    geomID := 316;
+    body := 574;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 114.00000;
@@ -7492,7 +7492,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 844;
+    entityID := 326;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7516,8 +7516,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0x0000ff";
     opaqueBorders := true;
-    geomID := 838;
-    body := 1605;
+    geomID := 317;
+    body := 576;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 115.00000;
@@ -7556,7 +7556,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 845;
+    entityID := 327;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7580,8 +7580,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0x0000ff";
     opaqueBorders := true;
-    geomID := 839;
-    body := 1607;
+    geomID := 318;
+    body := 578;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 116.00000;
@@ -7620,7 +7620,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 846;
+    entityID := 328;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7644,8 +7644,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0x963b20";
     opaqueBorders := true;
-    geomID := 840;
-    body := 1609;
+    geomID := 319;
+    body := 580;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 117.00000;
@@ -7684,7 +7684,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 847;
+    entityID := 329;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7708,8 +7708,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0x963b20";
     opaqueBorders := true;
-    geomID := 841;
-    body := 1611;
+    geomID := 320;
+    body := 582;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 118.00000;
@@ -7748,7 +7748,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 848;
+    entityID := 330;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7772,8 +7772,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0xffaa00";
     opaqueBorders := true;
-    geomID := 842;
-    body := 1613;
+    geomID := 321;
+    body := 584;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 119.00000;
@@ -7812,7 +7812,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 849;
+    entityID := 331;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7836,8 +7836,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0xffffff";
     opaqueBorders := true;
-    geomID := 843;
-    body := 1615;
+    geomID := 322;
+    body := 586;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 120.00000;
@@ -7876,7 +7876,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 850;
+    entityID := 332;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7900,8 +7900,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0x2222dd";
     opaqueBorders := true;
-    geomID := 844;
-    body := 1617;
+    geomID := 323;
+    body := 588;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 121.00000;
@@ -7940,7 +7940,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 851;
+    entityID := 333;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -7964,8 +7964,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0xffff00";
     opaqueBorders := true;
-    geomID := 845;
-    body := 1619;
+    geomID := 324;
+    body := 590;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 122.00000;
@@ -8004,7 +8004,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 852;
+    entityID := 334;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -8028,8 +8028,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0xffff00";
     opaqueBorders := true;
-    geomID := 846;
-    body := 1621;
+    geomID := 325;
+    body := 592;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 123.00000;
@@ -8068,7 +8068,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 853;
+    entityID := 335;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -8092,8 +8092,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0xff0000";
     opaqueBorders := true;
-    geomID := 847;
-    body := 1623;
+    geomID := 326;
+    body := 594;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 124.00000;
@@ -8132,7 +8132,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 1.0000000];
     friction := 0.50000000;
-    entityID := 854;
+    entityID := 336;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 1.0000000, 0.00000000, 1.0000000];
@@ -8156,8 +8156,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "0xff0000";
     opaqueBorders := true;
-    geomID := 848;
-    body := 1625;
+    geomID := 327;
+    body := 596;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 125.00000;
@@ -8196,7 +8196,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 3.0000000];
     friction := 0.50000000;
-    entityID := 859;
+    entityID := 337;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -8220,8 +8220,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 853;
-    body := 1635;
+    geomID := 328;
+    body := 598;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 126.00000;
@@ -8260,7 +8260,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 3.0000000];
     friction := 0.50000000;
-    entityID := 860;
+    entityID := 338;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -8284,8 +8284,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 854;
-    body := 1637;
+    geomID := 329;
+    body := 600;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 127.00000;
@@ -8324,7 +8324,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 3.0000000];
     friction := 0.50000000;
-    entityID := 861;
+    entityID := 339;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -8348,8 +8348,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 855;
-    body := 1639;
+    geomID := 330;
+    body := 602;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 128.00000;
@@ -8388,7 +8388,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 3.0000000];
     friction := 0.50000000;
-    entityID := 862;
+    entityID := 340;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -8412,8 +8412,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 856;
-    body := 1641;
+    geomID := 331;
+    body := 604;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 129.00000;
@@ -8452,7 +8452,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 3.0000000];
     friction := 0.50000000;
-    entityID := 863;
+    entityID := 341;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -8476,8 +8476,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 857;
-    body := 1643;
+    geomID := 332;
+    body := 606;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 130.00000;
@@ -8516,7 +8516,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 3.0000000];
     friction := 0.50000000;
-    entityID := 864;
+    entityID := 342;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -8540,8 +8540,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 858;
-    body := 1645;
+    geomID := 333;
+    body := 608;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 131.00000;
@@ -8580,7 +8580,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 3.0000000];
     friction := 0.50000000;
-    entityID := 865;
+    entityID := 343;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -8604,8 +8604,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 859;
-    body := 1647;
+    geomID := 334;
+    body := 610;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 132.00000;
@@ -8644,7 +8644,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 3.0000000];
     friction := 0.50000000;
-    entityID := 866;
+    entityID := 344;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -8668,8 +8668,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 860;
-    body := 1649;
+    geomID := 335;
+    body := 612;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 133.00000;
@@ -8708,7 +8708,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 3.0000000];
     friction := 0.50000000;
-    entityID := 867;
+    entityID := 345;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -8732,8 +8732,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 861;
-    body := 1651;
+    geomID := 336;
+    body := 614;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 134.00000;
@@ -8772,7 +8772,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 3.0000000];
     friction := 0.50000000;
-    entityID := 868;
+    entityID := 346;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -8796,8 +8796,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 862;
-    body := 1653;
+    geomID := 337;
+    body := 616;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 135.00000;
@@ -8836,7 +8836,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 3.0000000];
     friction := 0.50000000;
-    entityID := 869;
+    entityID := 347;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -8860,8 +8860,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 863;
-    body := 1655;
+    geomID := 338;
+    body := 618;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 136.00000;
@@ -8900,7 +8900,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.50000000, 3.0000000];
     friction := 0.50000000;
-    entityID := 870;
+    entityID := 348;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -8924,8 +8924,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 864;
-    body := 1657;
+    geomID := 339;
+    body := 620;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 137.00000;
@@ -8964,7 +8964,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.5000000, 0.49999979];
     friction := 0.50000000;
-    entityID := 871;
+    entityID := 349;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -8988,8 +8988,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 865;
-    body := 1659;
+    geomID := 340;
+    body := 622;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 138.00000;
@@ -9028,7 +9028,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.5000000, 0.49999979];
     friction := 0.50000000;
-    entityID := 872;
+    entityID := 350;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -9052,8 +9052,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 866;
-    body := 1661;
+    geomID := 341;
+    body := 624;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 139.00000;
@@ -9092,7 +9092,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.5000000, 0.49999979];
     friction := 0.50000000;
-    entityID := 873;
+    entityID := 351;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -9116,8 +9116,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 867;
-    body := 1663;
+    geomID := 342;
+    body := 626;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 140.00000;
@@ -9156,7 +9156,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.5000000, 0.49999979];
     friction := 0.50000000;
-    entityID := 874;
+    entityID := 352;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -9180,8 +9180,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 868;
-    body := 1665;
+    geomID := 343;
+    body := 628;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 141.00000;
@@ -9220,7 +9220,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.5000000, 0.49999979];
     friction := 0.50000000;
-    entityID := 875;
+    entityID := 353;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -9244,8 +9244,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 869;
-    body := 1667;
+    geomID := 344;
+    body := 630;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 142.00000;
@@ -9284,7 +9284,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.5000000, 0.49999979];
     friction := 0.50000000;
-    entityID := 876;
+    entityID := 354;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -9308,8 +9308,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 870;
-    body := 1669;
+    geomID := 345;
+    body := 632;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 143.00000;
@@ -9348,7 +9348,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.5000000, 0.49999979];
     friction := 0.50000000;
-    entityID := 877;
+    entityID := 355;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -9372,8 +9372,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 871;
-    body := 1671;
+    geomID := 346;
+    body := 634;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 144.00000;
@@ -9412,7 +9412,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.5000000, 0.49999979];
     friction := 0.50000000;
-    entityID := 878;
+    entityID := 356;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -9436,8 +9436,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 872;
-    body := 1673;
+    geomID := 347;
+    body := 636;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 145.00000;
@@ -9476,7 +9476,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.5000000, 0.49999979];
     friction := 0.50000000;
-    entityID := 879;
+    entityID := 357;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -9500,8 +9500,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 873;
-    body := 1675;
+    geomID := 348;
+    body := 638;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 146.00000;
@@ -9540,7 +9540,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.5000000, 0.49999979];
     friction := 0.50000000;
-    entityID := 880;
+    entityID := 358;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -9564,8 +9564,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 874;
-    body := 1677;
+    geomID := 349;
+    body := 640;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 147.00000;
@@ -9604,7 +9604,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.5000000, 0.49999979];
     friction := 0.50000000;
-    entityID := 881;
+    entityID := 359;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -9628,8 +9628,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 875;
-    body := 1679;
+    geomID := 350;
+    body := 642;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 148.00000;
@@ -9668,7 +9668,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [2.5000000, 0.49999979];
     friction := 0.50000000;
-    entityID := 882;
+    entityID := 360;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.60000002, 0.60000002, 0.60000002, 1.0000000];
@@ -9692,8 +9692,8 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 876;
-    body := 1681;
+    geomID := 351;
+    body := 644;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 149.00000;
@@ -9732,7 +9732,7 @@ Scene.addBox {
     reflectiveness := 1.0000000;
     size := [0.75000000, 1.5000000];
     friction := 0.50000000;
-    entityID := 890;
+    entityID := 361;
     velocityDamping := [0.00000000, 0.00000000, 0.00000000];
     onClick := (e)=>{};
     color := [0.00000000, 0.00000000, 0.83333331, 1.0000000];
@@ -9756,13 +9756,14 @@ Scene.addBox {
     postStep := (e)=>{};
     text := "";
     opaqueBorders := true;
-    geomID := 884;
-    body := 1697;
+    geomID := 352;
+    body := 646;
     edgeBlur := 0.00000000;
     angle := 0.00000000;
     zDepth := 150.00000;
     layer := 0
 };
 Scene.addGroup {
-    name := "selected"
+    name := "selected";
+    entityIDs := [362]
 }

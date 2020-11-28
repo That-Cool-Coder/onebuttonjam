@@ -27,14 +27,20 @@ const level3 = {
         },
         {
             type : 'rockWall',
-            position : wrk.v(900, 25),
-            size : wrk.v(300, 50),
+            position : wrk.v(850, 25),
+            size : wrk.v(200, 50),
             direction : 'up'
         },
         {
             type : 'rockWall',
-            position : wrk.v(1200, 25),
-            size : wrk.v(300, 50),
+            position : wrk.v(1050, 25),
+            size : wrk.v(200, 50),
+            direction : 'up'
+        },
+        {
+            type : 'rockWall',
+            position : wrk.v(1250, 25),
+            size : wrk.v(200, 50),
             direction : 'up'
         },
         {
