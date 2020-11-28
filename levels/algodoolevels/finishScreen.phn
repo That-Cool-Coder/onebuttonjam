@@ -171,10 +171,10 @@ Tools.DragTool -> {
     solveD = 4.0000000
 };
 Scene.Camera -> {
-    pan = [8.4237099, 0.94285876];
+    pan = [0.66043180, 2.4438963];
     rotation = 0.00000000;
     trackRotation = false;
-    zoom = 254.88385
+    zoom = 93.941826
 };
 App.Background -> {
     cloudOpacity = 0.60000002;
@@ -1102,7 +1102,7 @@ Scene.addBox {
     textFontSize := 32.000000;
     onHitByLaser := (e)=>{};
     textFont := "Verdana";
-    pos := [0.00000000, 1.3000001];
+    pos := [0.00000000, 5.2999997];
     onDie := (e)=>{};
     density := 2.0000000;
     airFrictionMult := 1.0000000;
@@ -1124,6 +1124,5 @@ Scene.addBox {
     layer := 0
 };
 Scene.addGroup {
-    name := "selected";
-    entityIDs := [786]
+    name := "selected"
 }

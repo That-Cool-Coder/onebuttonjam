@@ -9,7 +9,7 @@ const finishScreen = {
     blobSpawnMaxX : 500,
     backgroundType : 'image',
     backgroundTexture : wrk.GameEngine.Texture.fromUrl('assets/world/sunnyBackground.png'),
-    playerStartPosition : wrk.v(0, -130),
+    playerStartPosition : wrk.v(0, -530),
     environmentItems : [
         {
             type : 'grassWall',

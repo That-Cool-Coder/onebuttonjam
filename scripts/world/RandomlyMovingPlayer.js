@@ -11,14 +11,18 @@ class RandomlyMovingPlayer extends Player {
             switch(direction) {
                 case 0:
                     this.startJump();
+                    break;
                 case 1:
                     this.direction = 'right';
-                    this.setTexture(this.textures.right);              
+                    this.setTexture(this.textures.right);
+                    break;         
                 case 2:
                     this.direction = 'stopped';
+                    break;
                 case 3:
                     this.direction = 'left';
                     this.setTexture(this.textures.left);
+                    break;
             }
         }
     }
