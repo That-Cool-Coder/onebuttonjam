@@ -2,6 +2,7 @@
 
 const config = {
     gameName : 'Mountain Blob',
+    aboutPageUrl : 'https://thatcoolcoder.itch.io/mountain-blob',
 
     // Window
     bgColor : 0xffffff,
@@ -17,5 +18,5 @@ const config = {
     headingTextFormat : {fontSize : 30, fill : 0x9cb7e7, stroke : 0x000000, strokeThickness : 2},
 
     // Text
-    creditsText : 'Made by ThatCoolCoder for the 1 Button Jam 2020'
+    creditsText : 'Made by ThatCoolCoder for the 1 Button Jam 2020',
 }

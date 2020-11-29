@@ -5,6 +5,7 @@ class TitleScreen extends wrk.GameEngine.Scene {
         this.createBackground();
         this.createTitle();
         this.createPlayButton();
+        this.createAboutButton();
         this.createCredits();
     }
     
@@ -34,6 +35,21 @@ class TitleScreen extends wrk.GameEngine.Scene {
         });
 
         this.addChild(playButton);
+    }
+
+    createAboutButton() {
+        var pos = wrk.v.copyDiv(wrk.GameEngine.canvasSize, 2);
+        pos.y += 100;
+        var aboutButton = new wrk.GameEngine.Button('about button',
+            pos, wrk.PI, wrk.v(100, 50),
+            wrk.GameEngine.Texture.fromUrl('assets/ui/buttons/button2x1.png'), 'About',
+            config.buttonTextFormat);
+
+        aboutButton.mouseUpCallbacks.add(() => {
+            openAboutPage();
+        });
+
+        this.addChild(aboutButton);
     }
     
     createCredits() {

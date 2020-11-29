@@ -41,7 +41,7 @@ class World extends wrk.GameEngine.Entity {
         this.loadLevel(levelData);
 
         this.randomlyMovingPlayerHolder = new wrk.GameEngine.Entity(
-            'randomly moving player holder', wrk.v(0, 0), wrk.PI);
+            'randomly moving player holder', wrk.v(0, 0), 0);
         this.addChild(this.randomlyMovingPlayerHolder);
 
         this.environment.fallOffHeight = Infinity;
@@ -52,7 +52,6 @@ class World extends wrk.GameEngine.Entity {
             var player = new RandomlyMovingPlayer('randomly moving player', pos, wrk.PI,
                 this.environment);
             this.randomlyMovingPlayerHolder.addChild(player);
-            this.addChild(player);
         })
 
         this.update = () => this.finishScreenUpdate();
@@ -63,7 +62,7 @@ class World extends wrk.GameEngine.Entity {
         this.player.reset();
         this.crntLevel = levelData;
 
-        if (this.randomlyMovingPlayerHolder != undefined) {
+        if (this.children.includes(this.randomlyMovingPlayerHolder)) {
             this.removeChild(this.randomlyMovingPlayerHolder);
         }
 

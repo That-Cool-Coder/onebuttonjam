@@ -32,6 +32,10 @@ function testLevel(level) {
     wrk.GameEngine.selectScene(playScreen);
 }
 
-const isDevVersion = true;
+function openAboutPage() {
+    open(config.aboutPageUrl, '_blank');
+}
 
-console.log('This is a dev version based on testing version 2');
+const isDevVersion = false;
+
+console.log('This is playtesting version #3');

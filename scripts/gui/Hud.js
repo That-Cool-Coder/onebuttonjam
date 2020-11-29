@@ -12,7 +12,7 @@ class Hud extends wrk.GameEngine.Entity {
     constructor(name) {
         super(name, wrk.v(0, 0), 0);
 
-        this.createFrameRateShower();
+        //this.createFrameRateShower();
         this.createSpinningDial();
         this.createPauseButton();
     }
