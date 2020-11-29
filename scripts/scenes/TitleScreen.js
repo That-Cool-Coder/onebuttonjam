@@ -3,6 +3,7 @@ class TitleScreen extends wrk.GameEngine.Scene {
         super('Title Screen');
 
         this.createBackground();
+        this.createTitle();
         this.createPlayButton();
         this.createCredits();
     }
@@ -13,6 +14,13 @@ class TitleScreen extends wrk.GameEngine.Scene {
             wrk.GameEngine.Texture.fromUrl('assets/world/background.png'), wrk.GameEngine.canvasSize,
             wrk.v(1, 1));
         this.addChild(background);
+    }
+
+    createTitle() {
+        var title = new wrk.GameEngine.DrawableEntity('title',
+            wrk.v(wrk.GameEngine.canvasSize.x / 2, 150), wrk.PI,
+            wrk.GameEngine.Texture.fromUrl('assets/ui/title.png'), wrk.v(400, 200));
+        this.addChild(title);
     }
 
     createPlayButton() {

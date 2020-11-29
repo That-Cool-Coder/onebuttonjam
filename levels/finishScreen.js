@@ -13,7 +13,19 @@ const finishScreen = {
     environmentItems : [
         {
             type : 'grassWall',
-            position : wrk.v(-150, -25),
+            position : wrk.v(-300, -25),
+            size : wrk.v(300, 50),
+            direction : 'up'
+        },
+        {
+            type : 'grassWall',
+            position : wrk.v(-50, -25),
+            size : wrk.v(300, 50),
+            direction : 'up'
+        },
+        {
+            type : 'grassWall',
+            position : wrk.v(200, -25),
             size : wrk.v(300, 50),
             direction : 'up'
         },
@@ -25,13 +37,13 @@ const finishScreen = {
         },
         {
             type : 'grassWall',
-            position : wrk.v(-750, -25),
+            position : wrk.v(700, -25),
             size : wrk.v(300, 50),
             direction : 'up'
         },
         {
             type : 'grassWall',
-            position : wrk.v(150, -25),
+            position : wrk.v(-800, -25),
             size : wrk.v(300, 50),
             direction : 'up'
         },
@@ -49,28 +61,23 @@ const finishScreen = {
         },
         {
             type : 'grassWall',
-            position : wrk.v(875, -200),
+            position : wrk.v(825, -200),
             size : wrk.v(300, 50),
             direction : 'right'
         },
         {
             type : 'grassWall',
-            position : wrk.v(750, -25),
+            position : wrk.v(-550, -25),
             size : wrk.v(300, 50),
             direction : 'up'
         },
+        // Thing telling you that you have finished
         {
-            type : 'grassWall',
-            position : wrk.v(750, -25),
-            size : wrk.v(300, 50),
+            type : 'label',
+            position : wrk.v(0, -200),
+            text : 'Hooray! You managed to find your way back to Blobland!\n' + 
+                '(To exit, click pause then click quit level)',
             direction : 'up'
-        },
-        {
-            type : 'grassWall',
-            position : wrk.v(-450, -25),
-            size : wrk.v(300, 50),
-            direction : 'up'
-        },
-
+        }
     ]
 }
